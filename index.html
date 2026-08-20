@@ -47,6 +47,10 @@
       color: #F8FAFC;
       overflow-x: hidden;
     }
+    html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3 {
+      line-height: 1.35;
+      letter-spacing: normal;
+    }
     html[lang="en"] body {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
@@ -150,10 +154,9 @@
           </div>
 
           <!-- Main Hero Title -->
-          <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight sm:leading-tight">
-            <span data-i18n="hero_title_1">شركة قوس المدينة</span>
-            <br />
-            <span class="bg-gradient-to-r from-brandCyan via-brandCyanLight to-brandBlue bg-clip-text text-transparent" data-i18n="hero_title_2">
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white leading-snug sm:leading-normal md:leading-relaxed space-y-3 sm:space-y-5">
+            <span class="block py-1" data-i18n="hero_title_1">شركة قوس المدينة</span>
+            <span class="block bg-gradient-to-r from-brandCyan via-brandCyanLight to-brandBlue bg-clip-text text-transparent py-1 sm:py-2" data-i18n="hero_title_2">
               لتصنيع وتشكيل الزجاج والمرايا
             </span>
           </h1>
