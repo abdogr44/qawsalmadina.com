@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="title">شركة قوس المدينة | لتصنيع وتشكيل الزجاج والمرايا</title>
-  <meta name="description" data-i18n-attr="content:desc" content="شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في طرابلس، ليبيا. زجاج سيكوريت مقسى، دبل غلاس، زجاج مصفح، مرايا LED، كبائن شاور، ودرابزين." />
+  <meta name="description" data-i18n-attr="content:desc" content="شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في طرابلس، ليبيا." />
   
   <!-- Fonts: Alexandria for Arabic, Plus Jakarta Sans for English -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- Lucide Icons -->
@@ -56,14 +56,14 @@
 </head>
 <body class="min-h-full flex flex-col justify-between selection:bg-brandCyan selection:text-black antialiased relative overflow-x-hidden p-4 sm:p-6 md:p-10">
 
-  <!-- Subtle Ambient Glow -->
+  <!-- Ambient Glow -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
     <div class="absolute -top-32 -start-32 w-80 h-80 bg-brandCyan/10 rounded-full blur-3xl"></div>
     <div class="absolute -bottom-32 -end-32 w-80 h-80 bg-brandBlue/10 rounded-full blur-3xl"></div>
   </div>
 
   <!-- Header / Minimal Language Switcher -->
-  <header class="relative z-10 w-full max-w-4xl mx-auto flex items-center justify-between pb-6">
+  <header class="relative z-10 w-full max-w-2xl mx-auto flex items-center justify-between pb-6">
     <div class="flex items-center gap-2.5">
       <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brandCyan to-brandBlue flex items-center justify-center text-white p-2 shadow-lg shadow-cyan-500/20">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
@@ -82,42 +82,24 @@
     </button>
   </header>
 
-  <!-- Central Main Content Block (Very Minimal: Name, What They Do, Contacts) -->
-  <main class="relative z-10 w-full max-w-4xl mx-auto my-auto py-6 sm:py-10">
-    <div class="glass-box rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl space-y-8">
+  <!-- Central Main Content Block: Name, What We Do, Contacts -->
+  <main class="relative z-10 w-full max-w-2xl mx-auto my-auto py-6 sm:py-10">
+    <div class="glass-box rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8">
       
-      <!-- 1. Company Name -->
-      <div class="space-y-2 text-start">
-        <span class="text-xs font-bold text-brandCyan uppercase tracking-widest px-2.5 py-1 rounded bg-brandCyan/10 border border-brandCyan/20 inline-block mb-1" data-i18n="company_badge">
-          مصنع زجاج ومرايا معتمد
+      <!-- 1. Company Name & Core Identity -->
+      <div class="space-y-3 text-start">
+        <span class="text-xs font-bold text-brandCyan uppercase tracking-widest px-2.5 py-1 rounded bg-brandCyan/10 border border-brandCyan/20 inline-block" data-i18n="company_badge">
+          صناعة وتشكيل الزجاج والمرايا
         </span>
-        <h1 class="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight" data-i18n="company_name">
+        <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight" data-i18n="company_name">
           شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا
         </h1>
-      </div>
-
-      <!-- 2. What We Do (تخصصنا ونشاطنا) -->
-      <div class="space-y-4 text-start border-t border-white/10 pt-6">
-        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400" data-i18n="what_we_do_title">
-          مجال العمل والخدمات
-        </h2>
-        <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal" data-i18n="what_we_do_desc">
-          متخصصون في تصنيع، معالجة، وتوريد كافة الأعمال والحلول الزجاجية المعمارية والمرايا الفاخرة وفق أعلى معايير الجودة والدقة:
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal pt-1" data-i18n="what_we_do_desc">
+          شركة متخصصة في تصنيع، وتشكيل، وتوريد الزجاج والمرايا بأعلى معايير الجودة والدقة.
         </p>
-
-        <!-- Core Service Tags (Pills) -->
-        <div class="flex flex-wrap gap-2 pt-1">
-          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_1">زجاج سيكوريت مقسى (Tempered)</span>
-          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_2">زجاج دبل غلاس عازل (Double Glazed)</span>
-          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_3">زجاج مصفح وأمني (Laminated)</span>
-          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_4">مرايا LED ذكية ومرايا ديكورية</span>
-          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_5">كبائن شاور وحواجز استحمام</span>
-          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_6">درابزين وأسوار وواجهات زجاجية</span>
-          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_7">قص وتشكيل وشطف CNC</span>
-        </div>
       </div>
 
-      <!-- 3. Direct Contacts & Location -->
+      <!-- 2. Direct Contacts & Location -->
       <div class="space-y-4 border-t border-white/10 pt-6">
         <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 text-start" data-i18n="contacts_title">
           بيانات التواصل المباشر
@@ -175,7 +157,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="relative z-10 w-full max-w-4xl mx-auto pt-6 text-center text-xs text-slate-400">
+  <footer class="relative z-10 w-full max-w-2xl mx-auto pt-6 text-center text-xs text-slate-400">
     <p>© <span id="year">2026</span> <span data-i18n="footer_copy">شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا - جميع الحقوق محفوظة</span></p>
   </footer>
 
@@ -186,19 +168,11 @@
     const i18nData = {
       ar: {
         title: "شركة قوس المدينة | لتصنيع وتشكيل الزجاج والمرايا",
-        desc: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في طرابلس، ليبيا. زجاج سيكوريت مقسى، دبل غلاس، زجاج مصفح، مرايا LED، كبائن شاور، ودرابزين.",
+        desc: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في طرابلس، ليبيا.",
         brand_mini: "قوس المدينة",
-        company_badge: "مصنع زجاج ومرايا معتمد",
+        company_badge: "صناعة وتشكيل الزجاج والمرايا",
         company_name: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا",
-        what_we_do_title: "مجال العمل والخدمات",
-        what_we_do_desc: "متخصصون في تصنيع، معالجة، وتوريد كافة الأعمال والحلول الزجاجية المعمارية والمرايا الفاخرة وفق أعلى معايير الجودة والدقة:",
-        srv_1: "زجاج سيكوريت مقسى (Tempered)",
-        srv_2: "زجاج دبل غلاس عازل (Double Glazed)",
-        srv_3: "زجاج مصفح وأمني (Laminated)",
-        srv_4: "مرايا LED ذكية ومرايا ديكورية",
-        srv_5: "كبائن شاور وحواجز استحمام",
-        srv_6: "درابزين وأسوار وواجهات زجاجية",
-        srv_7: "قص وتشكيل وشطف CNC",
+        what_we_do_desc: "شركة متخصصة في تصنيع، وتشكيل، وتوريد الزجاج والمرايا بأعلى معايير الجودة والدقة.",
         contacts_title: "بيانات التواصل المباشر",
         btn_call_1: "اتصال هاتفي:",
         btn_call_2: "اتصال هاتفي:",
@@ -210,19 +184,11 @@
       },
       en: {
         title: "Qaws Al-Madina | Glass & Mirror Manufacturing Co.",
-        desc: "Qaws Al-Madina Company for Glass & Mirror Manufacturing in Tripoli, Libya. Tempered glass, double glazed DGU, laminated glass, LED mirrors, shower cabins & railings.",
+        desc: "Qaws Al-Madina Company for Glass and Mirror Manufacturing in Tripoli, Libya.",
         brand_mini: "Qaws Al-Madina",
-        company_badge: "Certified Glass & Mirror Manufacturer",
-        company_name: "Qaws Al-Madina Company for Glass & Mirror Manufacturing",
-        what_we_do_title: "What We Do & Core Capabilities",
-        what_we_do_desc: "Specialized in manufacturing, processing, and supplying premium architectural glass solutions and custom luxury mirrors with unmatched precision:",
-        srv_1: "Tempered Securit Glass",
-        srv_2: "Double Glazed Insulated Glass (DGU)",
-        srv_3: "Laminated Safety Glass",
-        srv_4: "Smart LED & Custom Decorative Mirrors",
-        srv_5: "Shower Cabins & Enclosures",
-        srv_6: "Glass Railings & Facades",
-        srv_7: "CNC Cutting, Shaping & Beveling",
+        company_badge: "Glass & Mirror Manufacturing",
+        company_name: "Qaws Al-Madina Company for the manufacture of glass and mirrors",
+        what_we_do_desc: "Specialized in the manufacturing, processing, and supply of high-quality glass and mirrors.",
         contacts_title: "Direct Contact Information",
         btn_call_1: "Direct Phone:",
         btn_call_2: "Direct Phone:",
@@ -238,7 +204,7 @@
 
     function setLanguage(lang) {
       currentLang = lang;
-      localStorage.setItem('qaws_minimal_lang', lang);
+      localStorage.setItem('qaws_pure_minimal_lang', lang);
 
       const html = document.documentElement;
       html.setAttribute('lang', lang);
@@ -271,7 +237,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      const saved = localStorage.getItem('qaws_minimal_lang') || 'ar';
+      const saved = localStorage.getItem('qaws_pure_minimal_lang') || 'ar';
       setLanguage(saved);
       lucide.createIcons();
     });
