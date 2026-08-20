@@ -1,58 +1,35 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
+<html lang="ar" dir="rtl" class="h-full">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="meta_title">شركة قوس المدينة | لتصنيع وتشكيل الزجاج والمرايا - طرابلس، ليبيا</title>
-  <meta name="description" data-i18n-attr="content:meta_desc" content="شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في ليبيا - طرابلس. زجاج سيكوريت، زجاج دبل عازل، زجاج مصفح، مرايا ليد ذكية، كبائن شاور، واجهات درابزين، وتشكيل CNC بأعلى معايير الجودة." />
-  <meta name="keywords" content="زجاج سيكوريت, مصنع زجاج ليبيا, مرايا طرابلس, زجاج دبل غلاس, كبائن شاور زجاجية, درابزين زجاج, شركة قوس المدينة, تشكيل زجاج CNC, مرايا ليد" />
+  <title data-i18n="title">شركة قوس المدينة | لتصنيع وتشكيل الزجاج والمرايا</title>
+  <meta name="description" data-i18n-attr="content:desc" content="شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في طرابلس، ليبيا. زجاج سيكوريت مقسى، دبل غلاس، زجاج مصفح، مرايا LED، كبائن شاور، ودرابزين." />
   
-  <!-- Open Graph / Meta -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا" />
-  <meta property="og:description" content="رواد تصنيع وتشكيل الزجاج المعماري والمرايا الفاخرة في ليبيا بأحدث الماكينات العالمية ودقة متناهية." />
-  
-  <!-- Google Fonts: Cairo, Alexandria, Plus Jakarta Sans -->
+  <!-- Fonts: Alexandria for Arabic, Plus Jakarta Sans for English -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Tailwind Configuration -->
+
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            brandDark: '#070D18',
-            brandNavy: '#0B1528',
-            brandSurface: '#101F38',
-            brandCard: 'rgba(16, 31, 56, 0.75)',
+            brandDark: '#070C14',
+            brandCard: 'rgba(15, 23, 42, 0.75)',
             brandCyan: '#06B6D4',
-            brandCyanLight: '#38BDF8',
             brandBlue: '#2563EB',
-            brandIce: '#E0F2FE',
-            brandGold: '#F59E0B',
           },
           fontFamily: {
-            ar: ['Alexandria', 'Cairo', 'sans-serif'],
-            en: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-          },
-          boxShadow: {
-            'glow-cyan': '0 0 35px -5px rgba(6, 182, 212, 0.35)',
-            'glow-blue': '0 0 35px -5px rgba(37, 99, 235, 0.35)',
-            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
-            'glass-inset': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.15)',
-          },
-          backgroundImage: {
-            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-            'glass-shine': 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.02) 100%)',
+            ar: ['Alexandria', 'sans-serif'],
+            en: ['Plus Jakarta Sans', 'sans-serif'],
           }
         }
       }
@@ -60,1716 +37,242 @@
   </script>
 
   <style>
-    :root {
-      color-scheme: dark;
-    }
+    :root { color-scheme: dark; }
     body {
-      font-family: 'Alexandria', 'Cairo', sans-serif;
-      background-color: #070D18;
+      font-family: 'Alexandria', sans-serif;
+      background-color: #070C14;
       color: #F8FAFC;
-      overflow-x: hidden;
     }
     html[lang="en"] body {
-      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    
-    /* Custom Glass Effects */
-    .glass-panel {
-      background: rgba(14, 25, 45, 0.65);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+    .glass-box {
+      background: linear-gradient(135deg, rgba(17, 27, 46, 0.8) 0%, rgba(10, 17, 30, 0.85) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .glass-card {
-      background: linear-gradient(135deg, rgba(16, 31, 56, 0.7) 0%, rgba(10, 20, 36, 0.8) 100%);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(56, 189, 248, 0.15);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .glass-card:hover {
-      border-color: rgba(56, 189, 248, 0.45);
-      transform: translateY(-4px);
-      box-shadow: 0 15px 35px -10px rgba(6, 182, 212, 0.25);
-    }
-
-    .glass-mirror {
-      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.08) 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .glass-mirror::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        60deg,
-        transparent 30%,
-        rgba(255, 255, 255, 0.15) 50%,
-        transparent 70%
-      );
-      transform: rotate(30deg);
-      pointer-events: none;
-      animation: mirrorShine 6s infinite ease-in-out;
-    }
-
-    @keyframes mirrorShine {
-      0% { transform: translateY(-100%) rotate(30deg); }
-      30%, 100% { transform: translateY(100%) rotate(30deg); }
-    }
-
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #070D18;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1E293B;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #06B6D4;
     }
   </style>
 </head>
-<body class="min-h-screen selection:bg-brandCyan selection:text-brandDark">
+<body class="min-h-full flex flex-col justify-between selection:bg-brandCyan selection:text-black antialiased relative overflow-x-hidden p-4 sm:p-6 md:p-10">
 
-  <!-- Ambient Light Orbs -->
+  <!-- Subtle Ambient Glow -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
-    <div class="absolute -top-40 -left-40 w-96 h-96 bg-brandCyan/15 rounded-full blur-3xl"></div>
-    <div class="absolute top-1/3 -right-40 w-[500px] h-[500px] bg-brandBlue/15 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-10 left-1/4 w-80 h-80 bg-cyan-400/10 rounded-full blur-3xl"></div>
+    <div class="absolute -top-32 -start-32 w-80 h-80 bg-brandCyan/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-32 -end-32 w-80 h-80 bg-brandBlue/10 rounded-full blur-3xl"></div>
   </div>
 
-  <!-- Top Announcement / Fast Contacts Bar -->
-  <div class="relative z-50 bg-brandNavy/90 border-b border-white/10 text-xs sm:text-sm py-2 px-4">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
-      <div class="flex items-center gap-4 text-slate-300">
-        <span class="flex items-center gap-1.5 text-brandCyan">
-          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
-          <span data-i18n="top_location">طرابلس - شارع الجمهورية خلف عمارة الصحافة</span>
-        </span>
-        <span class="hidden md:inline text-white/20">|</span>
-        <span class="hidden md:flex items-center gap-1.5 text-slate-300">
-          <i data-lucide="clock" class="w-3.5 h-3.5 text-brandCyan"></i>
-          <span data-i18n="top_hours">السبت - الخميس: 8:30 ص - 6:30 م</span>
-        </span>
+  <!-- Header / Minimal Language Switcher -->
+  <header class="relative z-10 w-full max-w-4xl mx-auto flex items-center justify-between pb-6">
+    <div class="flex items-center gap-2.5">
+      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brandCyan to-brandBlue flex items-center justify-center text-white p-2 shadow-lg shadow-cyan-500/20">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+          <polygon points="12 2 2 7 12 12 22 7 12 2" />
+          <polyline points="2 17 12 22 22 17" />
+          <polyline points="2 12 12 17 22 12" />
+        </svg>
       </div>
-      <div class="flex items-center gap-4">
-        <a href="tel:0913104466" class="flex items-center gap-1 text-slate-200 hover:text-brandCyan transition font-semibold" dir="ltr">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-brandCyan"></i>
-          091 310 4466
-        </a>
-        <a href="tel:0930677549" class="hidden sm:flex items-center gap-1 text-slate-200 hover:text-brandCyan transition font-semibold" dir="ltr">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-brandCyan"></i>
-          093 067 7549
-        </a>
-        <a href="mailto:Gawsalmadina19@gmail.com" class="hidden lg:flex items-center gap-1 text-slate-300 hover:text-brandCyan transition" dir="ltr">
-          <i data-lucide="mail" class="w-3.5 h-3.5 text-brandCyan"></i>
-          Gawsalmadina19@gmail.com
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main Navigation Bar -->
-  <header class="sticky top-0 z-40 glass-panel border-b border-white/10 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brandCyan to-brandBlue flex items-center justify-center shadow-glow-cyan text-white p-2.5 transition-transform group-hover:scale-105">
-            <!-- Glass/Mirror prism vector icon -->
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
-              <polygon points="12 2 2 7 12 12 22 7 12 2" />
-              <polyline points="2 17 12 22 22 17" />
-              <polyline points="2 12 12 17 22 12" />
-            </svg>
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-brandCyan transition" data-i18n="company_brand">قوس المدينة</span>
-              <span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded bg-brandCyan/20 text-brandCyan border border-brandCyan/30" data-i18n="badge_glass_mirrors">زجاج ومرايا</span>
-            </div>
-            <p class="text-xs text-slate-400 font-medium hidden sm:block" data-i18n="company_sub">لتصنيع وتشكيل الزجاج والمرايا</p>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-200">
-          <a href="#about" class="hover:text-brandCyan transition" data-i18n="nav_about">من نحن</a>
-          <a href="#products" class="hover:text-brandCyan transition" data-i18n="nav_products">منتجاتنا وخدماتنا</a>
-          <a href="#factory" class="hover:text-brandCyan transition" data-i18n="nav_factory">مصنعنا والتقنيات</a>
-          <a href="#specs" class="hover:text-brandCyan transition" data-i18n="nav_specs">دليل السماكات</a>
-          <a href="#portfolio" class="hover:text-brandCyan transition" data-i18n="nav_portfolio">معرض الأعمال</a>
-          <a href="#why-us" class="hover:text-brandCyan transition" data-i18n="nav_why">لماذا نحن</a>
-          <a href="#faq" class="hover:text-brandCyan transition" data-i18n="nav_faq">الأسئلة الشائعة</a>
-          <a href="#contact" class="hover:text-brandCyan transition" data-i18n="nav_contact">اتصل بنا</a>
-        </nav>
-
-        <!-- Action Buttons & Language Switcher -->
-        <div class="flex items-center gap-3">
-          
-          <!-- Language Toggle Button -->
-          <button id="langToggleBtn" onclick="toggleLanguage()" class="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/15 text-sm font-semibold text-slate-200 hover:text-brandCyan transition" title="Switch Language / تغيير اللغة">
-            <i data-lucide="globe" class="w-4 h-4 text-brandCyan"></i>
-            <span id="currentLangText">English</span>
-          </button>
-
-          <!-- Quote CTA Button -->
-          <a href="#quote" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brandCyan to-brandBlue text-white text-sm font-bold shadow-glow-cyan hover:opacity-95 transition-all hover:scale-[1.02]">
-            <i data-lucide="file-text" class="w-4 h-4"></i>
-            <span data-i18n="btn_request_quote">طلب عرض سعر</span>
-          </a>
-
-          <!-- Mobile Menu Toggle Button -->
-          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-lg bg-white/5 border border-white/10 text-white hover:text-brandCyan focus:outline-none">
-            <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
-          </button>
-        </div>
-
-      </div>
+      <span class="text-sm font-bold text-slate-300 tracking-wide" data-i18n="brand_mini">قوس المدينة</span>
     </div>
 
-    <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-brandNavy/95 backdrop-blur-xl px-6 py-6 space-y-4">
-      <nav class="flex flex-col space-y-3 text-base font-medium text-slate-200">
-        <a href="#about" onclick="toggleMobileMenu()" class="hover:text-brandCyan transition py-1" data-i18n="nav_about">من نحن</a>
-        <a href="#products" onclick="toggleMobileMenu()" class="hover:text-brandCyan transition py-1" data-i18n="nav_products">منتجاتنا وخدماتنا</a>
-        <a href="#factory" onclick="toggleMobileMenu()" class="hover:text-brandCyan transition py-1" data-i18n="nav_factory">مصنعنا والتقنيات</a>
-        <a href="#specs" onclick="toggleMobileMenu()" class="hover:text-brandCyan transition py-1" data-i18n="nav_specs">دليل السماكات</a>
-        <a href="#portfolio" onclick="toggleMobileMenu()" class="hover:text-brandCyan transition py-1" data-i18n="nav_portfolio">معرض الأعمال</a>
-        <a href="#why-us" onclick="toggleMobileMenu()" class="hover:text-brandCyan transition py-1" data-i18n="nav_why">لماذا نحن</a>
-        <a href="#faq" onclick="toggleMobileMenu()" class="hover:text-brandCyan transition py-1" data-i18n="nav_faq">الأسئلة الشائعة</a>
-        <a href="#contact" onclick="toggleMobileMenu()" class="hover:text-brandCyan transition py-1" data-i18n="nav_contact">اتصل بنا</a>
-      </nav>
-      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
-        <a href="#quote" onclick="toggleMobileMenu()" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-brandCyan to-brandBlue text-white font-bold shadow-glow-cyan text-sm">
-          <i data-lucide="file-text" class="w-4 h-4"></i>
-          <span data-i18n="btn_request_quote">طلب عرض سعر</span>
-        </a>
-        <a href="https://wa.me/218913104466" target="_blank" class="flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600/90 text-white font-bold text-sm hover:bg-emerald-500 transition">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
-          <span data-i18n="btn_whatsapp_chat">محادثة واتساب مباشرة</span>
-        </a>
-      </div>
-    </div>
+    <!-- Language Toggle Button -->
+    <button onclick="toggleLang()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-300 hover:text-white transition">
+      <i data-lucide="globe" class="w-3.5 h-3.5 text-brandCyan"></i>
+      <span id="langLabel">English</span>
+    </button>
   </header>
 
-  <main class="relative z-10 space-y-28 md:space-y-36 pb-20">
+  <!-- Central Main Content Block (Very Minimal: Name, What They Do, Contacts) -->
+  <main class="relative z-10 w-full max-w-4xl mx-auto my-auto py-6 sm:py-10">
+    <div class="glass-box rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl space-y-8">
+      
+      <!-- 1. Company Name -->
+      <div class="space-y-2 text-start">
+        <span class="text-xs font-bold text-brandCyan uppercase tracking-widest px-2.5 py-1 rounded bg-brandCyan/10 border border-brandCyan/20 inline-block mb-1" data-i18n="company_badge">
+          مصنع زجاج ومرايا معتمد
+        </span>
+        <h1 class="text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight" data-i18n="company_name">
+          شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا
+        </h1>
+      </div>
 
-    <!-- ========================================================================= -->
-    <!-- 1. HERO SECTION -->
-    <!-- ========================================================================= -->
-    <section class="relative pt-12 md:pt-20 lg:pt-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div class="relative overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-b from-slate-900/90 to-brandDark/95 shadow-2xl p-6 sm:p-10 lg:p-16">
-        
-        <!-- Hero Background Architectural Glass Imagery -->
-        <div class="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80" alt="Modern Glass Architecture" class="w-full h-full object-cover opacity-20 brightness-75 scale-105" />
-          <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-brandDark/85 to-transparent"></div>
-          <div class="absolute inset-0 bg-radial-gradient from-transparent via-brandDark/60 to-brandDark"></div>
+      <!-- 2. What We Do (تخصصنا ونشاطنا) -->
+      <div class="space-y-4 text-start border-t border-white/10 pt-6">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400" data-i18n="what_we_do_title">
+          مجال العمل والخدمات
+        </h2>
+        <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-normal" data-i18n="what_we_do_desc">
+          متخصصون في تصنيع، معالجة، وتوريد كافة الأعمال والحلول الزجاجية المعمارية والمرايا الفاخرة وفق أعلى معايير الجودة والدقة:
+        </p>
+
+        <!-- Core Service Tags (Pills) -->
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_1">زجاج سيكوريت مقسى (Tempered)</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_2">زجاج دبل غلاس عازل (Double Glazed)</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_3">زجاج مصفح وأمني (Laminated)</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_4">مرايا LED ذكية ومرايا ديكورية</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_5">كبائن شاور وحواجز استحمام</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_6">درابزين وأسوار وواجهات زجاجية</span>
+          <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-200" data-i18n="srv_7">قص وتشكيل وشطف CNC</span>
         </div>
+      </div>
 
-        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
+      <!-- 3. Direct Contacts & Location -->
+      <div class="space-y-4 border-t border-white/10 pt-6">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 text-start" data-i18n="contacts_title">
+          بيانات التواصل المباشر
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           
-          <!-- Trust Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-brandCyan/30 text-brandCyan text-xs sm:text-sm font-semibold shadow-glow-cyan animate-pulse">
-            <i data-lucide="sparkles" class="w-4 h-4 text-brandCyan"></i>
-            <span data-i18n="hero_badge">أعلى معايير التصنيع والتقسية الحرارية والتشكيل في ليبيا</span>
-          </div>
-
-          <!-- Main Heading -->
-          <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight sm:leading-tight">
-            <span data-i18n="hero_h1_p1">شركة قوس المدينة</span>
-            <br />
-            <span class="bg-gradient-to-r from-brandCyan via-brandCyanLight to-brandBlue bg-clip-text text-transparent" data-i18n="hero_h1_p2">
-              لتصنيع وتشكيل الزجاج والمرايا
+          <!-- Call Button 1 -->
+          <a href="tel:0913104466" class="flex items-center justify-between p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition group text-slate-200">
+            <span class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+              <i data-lucide="phone" class="w-4 h-4 text-brandCyan"></i>
+              <span data-i18n="btn_call_1">اتصال هاتفي:</span>
             </span>
-          </h1>
+            <bdi dir="ltr" class="text-sm font-bold text-white group-hover:text-brandCyan transition">091 310 4466</bdi>
+          </a>
 
-          <!-- Subtitle / Value Proposition -->
-          <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed" data-i18n="hero_subtext">
-            نقدم حلولاً هندسية ومعمارية متكاملة في صناعة الزجاج السيكوريت المقسى، الزجاج المزدوج العازل (Double Glazed)، الزجاج المصفح (Laminated)، وأحدث تشكيلات المرايا الذكية LED والكبائن والواجهات المعمارية بأحدث تقنيات CNC العالمية.
-          </p>
+          <!-- Call Button 2 -->
+          <a href="tel:0930677549" class="flex items-center justify-between p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition group text-slate-200">
+            <span class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+              <i data-lucide="phone" class="w-4 h-4 text-brandCyan"></i>
+              <span data-i18n="btn_call_2">اتصال هاتفي:</span>
+            </span>
+            <bdi dir="ltr" class="text-sm font-bold text-white group-hover:text-brandCyan transition">093 067 7549</bdi>
+          </a>
 
-          <!-- CTAs -->
-          <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <a href="#quote" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-gradient-to-r from-brandCyan to-brandBlue text-white font-bold text-base shadow-glow-cyan hover:shadow-cyan-500/50 hover:scale-105 transition-all">
-              <i data-lucide="calculator" class="w-5 h-5"></i>
-              <span data-i18n="hero_cta_quote">اطلب عرض سعر فوري</span>
-            </a>
-            <a href="#products" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl glass-panel border border-white/20 text-white font-semibold text-base hover:bg-white/15 hover:border-brandCyan/50 transition-all">
-              <i data-lucide="layers" class="w-5 h-5 text-brandCyan"></i>
-              <span data-i18n="hero_cta_explore">تصفح المنتجات والخدمات</span>
-            </a>
-          </div>
+          <!-- WhatsApp Direct -->
+          <a href="https://wa.me/218913104466" target="_blank" class="flex items-center justify-between p-3.5 rounded-xl bg-emerald-950/40 hover:bg-emerald-900/50 border border-emerald-500/30 transition group text-slate-200 sm:col-span-2">
+            <span class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-emerald-300">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span data-i18n="btn_whatsapp">محادثة واتساب مباشرة:</span>
+            </span>
+            <bdi dir="ltr" class="text-sm font-bold text-emerald-400">+218 91 310 4466</bdi>
+          </a>
 
-          <!-- Key Highlights Grid / Stats -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-white/10">
-            <div class="p-4 rounded-2xl glass-card text-center">
-              <div class="text-2xl sm:text-3xl font-extrabold text-brandCyan">+15</div>
-              <div class="text-xs sm:text-sm text-slate-300 mt-1" data-i18n="stat_exp">عاماً من الخبرة والريادة</div>
-            </div>
-            <div class="p-4 rounded-2xl glass-card text-center">
-              <div class="text-2xl sm:text-3xl font-extrabold text-brandCyanLight">100%</div>
-              <div class="text-xs sm:text-sm text-slate-300 mt-1" data-i18n="stat_precision">دقة قطع وتشكيل CNC</div>
-            </div>
-            <div class="p-4 rounded-2xl glass-card text-center">
-              <div class="text-2xl sm:text-3xl font-extrabold text-brandCyan">+500</div>
-              <div class="text-xs sm:text-sm text-slate-300 mt-1" data-i18n="stat_projects">مشروع معماري منجز</div>
-            </div>
-            <div class="p-4 rounded-2xl glass-card text-center">
-              <div class="text-2xl sm:text-3xl font-extrabold text-brandCyanLight">EU</div>
-              <div class="text-xs sm:text-sm text-slate-300 mt-1" data-i18n="stat_standards">مطابقة للمواصفات العالمية</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 2. ABOUT US SECTION -->
-    <!-- ========================================================================= -->
-    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        
-        <!-- Left: Image Montage with Glass Frame -->
-        <div class="relative">
-          <div class="relative rounded-3xl overflow-hidden border border-white/20 shadow-2xl glass-mirror">
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" alt="Glass Factory and Production" class="w-full h-[420px] object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-brandDark via-transparent to-transparent"></div>
-          </div>
-          <!-- Floating Feature Badge -->
-          <div class="absolute -bottom-6 -right-4 sm:-bottom-8 sm:right-6 glass-panel border border-brandCyan/40 p-5 rounded-2xl shadow-glow-cyan max-w-xs">
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-xl bg-brandCyan/20 text-brandCyan flex items-center justify-center">
-                <i data-lucide="shield-check" class="w-6 h-6"></i>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white" data-i18n="about_badge_title">ضمان المتانة والأمان</h4>
-                <p class="text-xs text-slate-300" data-i18n="about_badge_desc">فحص جودة دقيق لكل قطعة قبل التسليم والتركيب</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Text Content -->
-        <div class="space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
-            <i data-lucide="info" class="w-3.5 h-3.5"></i>
-            <span data-i18n="about_tag">نبذة عن الشركة ومصنعنا</span>
-          </div>
-
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
-            <span data-i18n="about_title_1">نحن نبني الشفافية والأناقة،</span>
-            <br />
-            <span class="text-brandCyan" data-i18n="about_title_2">قطعة زجاجية تلو الأخرى.</span>
-          </h2>
-
-          <p class="text-slate-300 text-base leading-relaxed" data-i18n="about_desc_1">
-            تأسست <strong>شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا</strong> لتكون وجهتكم الموثوقة الأولى في طرابلس وليبيا للحلول الزجاجية المعمارية والديكورية المتطورة. نمتلك خطوط إنتاج متقدمة وأفران تقسيم حراري فائقة الكفاءة وماكينات CNC إيطالية توفر أعلى درجات الدقة في التقطيع، الشطف، الحفر، والتلميع.
-          </p>
-
-          <p class="text-slate-400 text-sm leading-relaxed" data-i18n="about_desc_2">
-            نلبي احتياجات كبرى المشاريع الهندسية، الأبراج الإدارية، المجمعات السكنية، الفنادق، والفيلات الفاخرة، إضافة إلى تلبية الطلبات الخاصة المخصصة بأعلى معايير السلامة والجودة العالمية.
-          </p>
-
-          <!-- Core Pillars -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandCyan shrink-0 mt-0.5"></i>
-              <div>
-                <h4 class="text-sm font-bold text-white" data-i18n="pillar_1_title">دقة القياس والتصنيع</h4>
-                <p class="text-xs text-slate-400" data-i18n="pillar_1_desc">قص مبرمج بدقة المليمتر لتناسب مثالي في الموقع</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandCyan shrink-0 mt-0.5"></i>
-              <div>
-                <h4 class="text-sm font-bold text-white" data-i18n="pillar_2_title">تقنيات التقسية الأوروبية</h4>
-                <p class="text-xs text-slate-400" data-i18n="pillar_2_desc">تحمل صدمات يصل إلى 5 أضعاف الزجاج العادي</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandCyan shrink-0 mt-0.5"></i>
-              <div>
-                <h4 class="text-sm font-bold text-white" data-i18n="pillar_3_title">توريد وتركيب متكامل</h4>
-                <p class="text-xs text-slate-400" data-i18n="pillar_3_desc">فريق فني متخصص للرفع المساحي والتركيب الاحترافي</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/5 border border-white/10">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandCyan shrink-0 mt-0.5"></i>
-              <div>
-                <h4 class="text-sm font-bold text-white" data-i18n="pillar_4_title">تصاميم مرايا عصرية</h4>
-                <p class="text-xs text-slate-400" data-i18n="pillar_4_desc">مرايا LED ذكية، شطف ديكوري، ولمسات فندقية راقية</p>
-              </div>
-            </div>
-          </div>
+          <!-- Email -->
+          <a href="mailto:Gawsalmadina19@gmail.com" class="flex items-center justify-between p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition group text-slate-200 sm:col-span-2">
+            <span class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
+              <i data-lucide="mail" class="w-4 h-4 text-brandCyan"></i>
+              <span data-i18n="btn_email">البريد الإلكتروني:</span>
+            </span>
+            <bdi dir="ltr" class="text-xs sm:text-sm font-semibold text-slate-300 group-hover:text-brandCyan transition">Gawsalmadina19@gmail.com</bdi>
+          </a>
 
         </div>
 
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 3. PRODUCTS & SERVICES -->
-    <!-- ========================================================================= -->
-    <section id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      
-      <!-- Section Header -->
-      <div class="text-center space-y-4 max-w-3xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
-          <i data-lucide="grid" class="w-3.5 h-3.5"></i>
-          <span data-i18n="prod_tag">مجموعة متكاملة</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="prod_title">منتجاتنا وخدماتنا المتخصصة</h2>
-        <p class="text-slate-300 text-base" data-i18n="prod_sub">
-          نصنع ونشكل أفضل أنواع الزجاج والمرايا وفق أعلى المعايير الهندسية والمعمارية لتلبي كافة المتطلبات الإنشائية والجمالية.
-        </p>
-      </div>
-
-      <!-- Services Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        
-        <!-- 1. Tempered Securit Glass -->
-        <div class="glass-card rounded-2xl overflow-hidden p-6 sm:p-7 space-y-5 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="relative h-48 rounded-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=800&q=80" alt="Tempered Glass" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-              <div class="absolute top-3 right-3 bg-brandDark/80 backdrop-blur px-2.5 py-1 rounded-md text-xs font-bold text-brandCyan border border-brandCyan/30" data-i18n="badge_safety">أمان عالي</div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-brandCyan/15 text-brandCyan flex items-center justify-center">
-                <i data-lucide="shield" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white" data-i18n="prod_1_title">الزجاج السيكوريت المقسى (Tempered)</h3>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed" data-i18n="prod_1_desc">
-              زجاج معالج حرارياً في أفراننا المتطورة لزيادة قوة التحمل حتى 5 أضعاف الزجاج العادي، يتفتت إلى حبيبات صغيرة غير حادة عند الكسر لضمان أقصى درجات الأمان في الواجهات، الأبواب، والفواصل.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-brandCyan font-semibold">
-            <span data-i18n="thickness_label">السماكات: 6mm - 19mm</span>
-            <a href="#quote" class="hover:underline flex items-center gap-1"><span data-i18n="btn_quote_item">طلب تسعير</span> &larr;</a>
-          </div>
+        <!-- Address Bar -->
+        <div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-white/[0.03] border border-white/5 text-xs sm:text-sm text-slate-300 text-start">
+          <i data-lucide="map-pin" class="w-4 h-4 text-brandCyan shrink-0 mt-0.5"></i>
+          <span data-i18n="address">الموقع: ليبيا - طرابلس - شارع الجمهورية خلف عمارة الصحافة</span>
         </div>
 
-        <!-- 2. Double Glazed & Insulated Glass Units (DGU) -->
-        <div class="glass-card rounded-2xl overflow-hidden p-6 sm:p-7 space-y-5 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="relative h-48 rounded-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Double Glazed Glass" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-              <div class="absolute top-3 right-3 bg-brandDark/80 backdrop-blur px-2.5 py-1 rounded-md text-xs font-bold text-brandCyanLight border border-brandCyan/30" data-i18n="badge_thermal">عزل حراري وصوتي</div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-brandBlue/20 text-brandCyanLight flex items-center justify-center">
-                <i data-lucide="thermometer-snowflake" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white" data-i18n="prod_2_title">الزجاج المزدوج العازل (Double Glazed)</h3>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed" data-i18n="prod_2_desc">
-              وحدات زجاجية مزدوجة ومفرغة محكمة الإغلاق ومحقونة بغاز الأرجون مع فواصل ألومنيوم حرارية، توفر عزلاً فائقاً للصوت والحرارة وتوفر فواتير التكييف والطاقة للمباني والفلل.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-brandCyan font-semibold">
-            <span data-i18n="dgu_feature">عزل صوتي 80% + توفير طاقة</span>
-            <a href="#quote" class="hover:underline flex items-center gap-1"><span data-i18n="btn_quote_item">طلب تسعير</span> &larr;</a>
-          </div>
-        </div>
-
-        <!-- 3. Luxury LED Smart Mirrors -->
-        <div class="glass-card rounded-2xl overflow-hidden p-6 sm:p-7 space-y-5 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="relative h-48 rounded-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="LED Smart Mirror" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-              <div class="absolute top-3 right-3 bg-brandDark/80 backdrop-blur px-2.5 py-1 rounded-md text-xs font-bold text-brandGold border border-brandGold/30" data-i18n="badge_luxury">فخامة وتكنولوجيا</div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-brandGold flex items-center justify-center">
-                <i data-lucide="sparkles" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white" data-i18n="prod_3_title">المرايا الذكية الفاخرة ومرايا LED</h3>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed" data-i18n="prod_3_desc">
-              مرايا كريستالية بلجيكية نقية مزودة بإضاءات LED خفية تعمل باللمس، أنظمة إزالة الضباب والبخار (Anti-Fog)، ومرايا ديكورية مشطوفة لكبرى الصالونات، الفنادق، والفيلات الفخمة.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-brandGold font-semibold">
-            <span data-i18n="touch_dimming">مستشعر لمس + مانع بخار</span>
-            <a href="#quote" class="hover:underline flex items-center gap-1"><span data-i18n="btn_quote_item">طلب تسعير</span> &larr;</a>
-          </div>
-        </div>
-
-        <!-- 4. Shower Enclosures & Cabins -->
-        <div class="glass-card rounded-2xl overflow-hidden p-6 sm:p-7 space-y-5 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="relative h-48 rounded-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Shower Enclosures" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-              <div class="absolute top-3 right-3 bg-brandDark/80 backdrop-blur px-2.5 py-1 rounded-md text-xs font-bold text-brandCyan border border-brandCyan/30" data-i18n="badge_custom">تفصيل مخصص</div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-brandCyan/15 text-brandCyan flex items-center justify-center">
-                <i data-lucide="bath" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white" data-i18n="prod_4_title">كبائن الشاور وحواجز الاستحمام</h3>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed" data-i18n="prod_4_desc">
-              كبائن شاور زجاجية سيكوريت عصرية (مفصلية وسحابة) بزجاج 8mm و 10mm مع معالجة نانو المقاومة للترسبات وبقع الماء، وإكسسوارات ستانلس ستيل 304 المقاومة للصدأ بألوانها الذهبي والأسود والكروم.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-brandCyan font-semibold">
-            <span data-i18n="shower_sub">زجاج نقي + استانلس 304</span>
-            <a href="#quote" class="hover:underline flex items-center gap-1"><span data-i18n="btn_quote_item">طلب تسعير</span> &larr;</a>
-          </div>
-        </div>
-
-        <!-- 5. Glass Balustrades & Railings -->
-        <div class="glass-card rounded-2xl overflow-hidden p-6 sm:p-7 space-y-5 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="relative h-48 rounded-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Glass Railings" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-              <div class="absolute top-3 right-3 bg-brandDark/80 backdrop-blur px-2.5 py-1 rounded-md text-xs font-bold text-brandCyanLight border border-brandCyan/30" data-i18n="badge_modern">رؤية بانورامية</div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-brandBlue/20 text-brandCyanLight flex items-center justify-center">
-                <i data-lucide="maximize-2" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white" data-i18n="prod_5_title">الدرابزين والأسوار الزجاجية</h3>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed" data-i18n="prod_5_desc">
-              أنظمة درابزين زجاجية مصفحة وسيكوريت للشرفات والسلالم وأحواض السباحة بأنظمة التثبيت الأرضية المخفية والـ Spigots، تمنح المبنى مظهراً فندقياً عصرياً وأماناً لا يضاهى.
-            </p>
-          </div>
-          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-brandCyan font-semibold">
-            <span data-i18n="rail_sub">زجاج مصفح 12mm - 21.5mm</span>
-            <a href="#quote" class="hover:underline flex items-center gap-1"><span data-i18n="btn_quote_item">طلب تسعير</span> &larr;</a>
-          </div>
-        </div>
-
-        <!-- 6. CNC Cutting, Beveling & Decorative Processing -->
-        <div class="glass-card rounded-2xl overflow-hidden p-6 sm:p-7 space-y-5 flex flex-col justify-between group">
-          <div class="space-y-4">
-            <div class="relative h-48 rounded-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="CNC Glass Processing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-              <div class="absolute top-3 right-3 bg-brandDark/80 backdrop-blur px-2.5 py-1 rounded-md text-xs font-bold text-emerald-400 border border-emerald-500/30" data-i18n="badge_cnc">تشكيل ميكانيكي</div>
-            </div>
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-                <i data-lucide="cpu" class="w-5 h-5"></i>
-              </div>
-              <h3 class="text-xl font-bold text-white" data-i18n="prod_6_title">خدمات تشكيل وقص وزخرفة الزجاج (CNC)</h3>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed" data-i18n="prod_6_desc">
-              خدمات هندسية متكاملة تشمل القص الآلي بماكينات CNC، شطف وتلميع الحواف (Straight & Bevel Edge Polishing)، الثقب الدقيق لمقابض الأبواب، والطباعة والحفر الرملي الزخرفي (Sandblasting).
-            </p>
-          </div>
-          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-brandCyan font-semibold">
-            <span data-i18n="cnc_sub">دقة متناهية ± 0.2mm</span>
-            <a href="#quote" class="hover:underline flex items-center gap-1"><span data-i18n="btn_quote_item">طلب تسعير</span> &larr;</a>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 4. FACTORY & TECHNOLOGY -->
-    <!-- ========================================================================= -->
-    <section id="factory" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="glass-panel rounded-3xl p-8 sm:p-12 lg:p-16 border border-white/15 relative overflow-hidden">
-        
-        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          <div class="space-y-6">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
-              <i data-lucide="factory" class="w-3.5 h-3.5"></i>
-              <span data-i18n="factory_tag">البنية التحتية والماكينات</span>
-            </div>
-
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="factory_title">
-              مصنع مجهز بأحدث خطوط الإنتاج والتقسية الحرارية
-            </h2>
-
-            <p class="text-slate-300 text-base leading-relaxed" data-i18n="factory_desc">
-              يضم مصنع شركة قوس المدينة في طرابلس بنية تحتية صناعية متكاملة ومجهزة بأحدث ماكينات تشكيل الزجاج والتقسية الحرارية المستوردة، بإشراف مهندسين وفنيين ذوي خبرة طويلة لضمان سرعة التنفيذ والامتثال الصارم لأعلى معايير الأمان والسلامة.
-            </p>
-
-            <div class="space-y-4 pt-2">
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-brandCyan/20 text-brandCyan flex items-center justify-center shrink-0">
-                  <i data-lucide="flame" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <h4 class="text-base font-bold text-white" data-i18n="machinery_1_title">فرن التقسية الحرارية الأفقي (Tempering Furnace)</h4>
-                  <p class="text-sm text-slate-400" data-i18n="machinery_1_desc">تسخين متجانس وتبريد هوائي سريع يمنح الزجاج قوة فائقة ومرونة لمقاومة الرياح والصدمات الشديدة.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-brandCyan/20 text-brandCyan flex items-center justify-center shrink-0">
-                  <i data-lucide="crosshair" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <h4 class="text-base font-bold text-white" data-i18n="machinery_2_title">طاولات القص الأوتوماتيكية بالكمبيوتر (CNC Cutting Tables)</h4>
-                  <p class="text-sm text-slate-400" data-i18n="machinery_2_desc">قص مبرمج بدقة هندسية متناهية للأشكال المستقيمة والمنحنية والقواطع الخاصة.</p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-brandCyan/20 text-brandCyan flex items-center justify-center shrink-0">
-                  <i data-lucide="sparkle" class="w-5 h-5"></i>
-                </div>
-                <div>
-                  <h4 class="text-base font-bold text-white" data-i18n="machinery_3_title">خطوط جلي وتلميع وشطف الحواف (Edging & Beveling Lines)</h4>
-                  <p class="text-sm text-slate-400" data-i18n="machinery_3_desc">تشطيب فائق النقاء للحواف (Flat Polish, Pencil, Bevel) لتوفير أمان تام ولمعان كريستالي مذهل.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Video / Machinery Visual Showcase -->
-          <div class="relative">
-            <div class="rounded-2xl overflow-hidden border border-white/20 shadow-glow-cyan">
-              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80" alt="Glass factory machinery" class="w-full h-[460px] object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-brandDark/90 via-transparent to-transparent flex items-end p-6">
-                <div class="glass-panel p-4 rounded-xl border border-white/20 w-full">
-                  <p class="text-xs text-brandCyan font-semibold" data-i18n="factory_sub_tag">المعايير المعتمدة</p>
-                  <p class="text-sm text-white font-bold" data-i18n="factory_sub_title">EN 12150 (Tempered Glass) & ASTM Standards</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 5. INTERACTIVE GLASS SPECS GUIDE -->
-    <!-- ========================================================================= -->
-    <section id="specs" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-      <div class="text-center space-y-4 max-w-3xl mx-auto">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
-          <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
-          <span data-i18n="specs_tag">دليل المواصفات الهندسية</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="specs_title">سماكات واستخدامات الزجاج النموذجية</h2>
-        <p class="text-slate-300 text-base" data-i18n="specs_desc">
-          اختر السماكة ونوع الزجاج المناسب لمشروعك وفق الإرشادات الهندسية الموصى بها:
-        </p>
-      </div>
-
-      <!-- Interactive Thickness Tabs -->
-      <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-white/15">
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mb-8" id="specTabs">
-          <button onclick="showSpec(6)" class="spec-tab-btn active py-3 px-4 rounded-xl font-bold text-sm text-center border transition bg-brandCyan text-brandDark border-brandCyan shadow-glow-cyan" data-thickness="6">
-            6 ملم (6mm)
-          </button>
-          <button onclick="showSpec(8)" class="spec-tab-btn py-3 px-4 rounded-xl font-bold text-sm text-center border transition bg-white/5 text-slate-300 border-white/10 hover:border-brandCyan/40" data-thickness="8">
-            8 ملم (8mm)
-          </button>
-          <button onclick="showSpec(10)" class="spec-tab-btn py-3 px-4 rounded-xl font-bold text-sm text-center border transition bg-white/5 text-slate-300 border-white/10 hover:border-brandCyan/40" data-thickness="10">
-            10 ملم (10mm)
-          </button>
-          <button onclick="showSpec(12)" class="spec-tab-btn py-3 px-4 rounded-xl font-bold text-sm text-center border transition bg-white/5 text-slate-300 border-white/10 hover:border-brandCyan/40" data-thickness="12">
-            12 ملم (12mm)
-          </button>
-          <button onclick="showSpec(19)" class="spec-tab-btn py-3 px-4 rounded-xl font-bold text-sm text-center border transition bg-white/5 text-slate-300 border-white/10 hover:border-brandCyan/40" data-thickness="19">
-            19 ملم (19mm+)
-          </button>
-        </div>
-
-        <!-- Spec Dynamic Content Area -->
-        <div id="specContent" class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-          <div class="lg:col-span-2 space-y-4">
-            <div class="flex items-center gap-3">
-              <span id="specTitleBadge" class="text-3xl font-black text-brandCyan">6 mm</span>
-              <h3 id="specTitle" class="text-2xl font-bold text-white">الزجاج السيكوريت الخفيف والشبابيك المزدوجة</h3>
-            </div>
-            <p id="specDetails" class="text-slate-300 text-base leading-relaxed">
-              تعتبر سماكة 6 ملم الخيار القياسي والمثالي للنوافذ السكنية المزدوجة (Double Glazing)، الواجهات الداخلية الخفيفة، أرفف الخزائن الزجاجية، والمرايا الجدارية الكبيرة المدعمة.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2" id="specBullets">
-              <div class="flex items-center gap-2 text-sm text-slate-200"><i data-lucide="check" class="w-4 h-4 text-brandCyan"></i><span>نوافذ الألمنيوم والـ PVC المزدوجة</span></div>
-              <div class="flex items-center gap-2 text-sm text-slate-200"><i data-lucide="check" class="w-4 h-4 text-brandCyan"></i><span>المرايا الكبيرة ذات الشطف العريض</span></div>
-              <div class="flex items-center gap-2 text-sm text-slate-200"><i data-lucide="check" class="w-4 h-4 text-brandCyan"></i><span>أرفف وأسطح الطاولات الخفيفة</span></div>
-              <div class="flex items-center gap-2 text-sm text-slate-200"><i data-lucide="check" class="w-4 h-4 text-brandCyan"></i><span>أبواب الخزائن المودرن</span></div>
-            </div>
-          </div>
-          <div class="glass-card p-6 rounded-2xl border border-brandCyan/30 space-y-4">
-            <h4 class="text-sm font-bold text-slate-300 uppercase tracking-wider" data-i18n="spec_card_title">الخيارات اللونية المتوفرة</h4>
-            <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white" data-i18n="color_clear">شفاف نقي (Clear)</span>
-              <span class="px-3 py-1 rounded-full bg-cyan-900/40 border border-brandCyan/40 text-brandCyan" data-i18n="color_extra_clear">سوبر كلير (Extra Clear)</span>
-              <span class="px-3 py-1 rounded-full bg-amber-950/40 border border-amber-500/30 text-amber-300" data-i18n="color_bronze">برونزي عاكس (Bronze)</span>
-              <span class="px-3 py-1 rounded-full bg-slate-700/50 border border-slate-500/30 text-slate-300" data-i18n="color_grey">رمادي غامق (Smoke Grey)</span>
-              <span class="px-3 py-1 rounded-full bg-blue-900/40 border border-blue-400/30 text-blue-300" data-i18n="color_frosted">مثلج ومصنفر (Frosted)</span>
-            </div>
-            <a href="#quote" class="block text-center py-2.5 px-4 rounded-xl bg-brandCyan text-brandDark font-bold text-sm hover:opacity-90 transition mt-4" data-i18n="btn_inquire_thickness">طلب استشارة لهذه السماكة</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 6. PORTFOLIO / GALLERY -->
-    <!-- ========================================================================= -->
-    <section id="portfolio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div class="space-y-3">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
-            <i data-lucide="image" class="w-3.5 h-3.5"></i>
-            <span data-i18n="portfolio_tag">معرض الأعمال والإنجازات</span>
-          </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="portfolio_title">مشاريع وتطبيقات من أرض الواقع</h2>
-          <p class="text-slate-300 text-sm sm:text-base max-w-2xl" data-i18n="portfolio_desc">
-            نماذج من أعمالنا المنفذة في كبرى المشاريع التجارية والسكنية والفندقية في ليبيا.
-          </p>
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="flex flex-wrap gap-2" id="galleryFilters">
-          <button onclick="filterGallery('all')" class="gallery-filter active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-brandCyan text-brandDark transition" data-filter="all" data-i18n="filter_all">الكل</button>
-          <button onclick="filterGallery('facades')" class="gallery-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition" data-filter="facades" data-i18n="filter_facades">الواجهات والمباني</button>
-          <button onclick="filterGallery('mirrors')" class="gallery-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition" data-filter="mirrors" data-i18n="filter_mirrors">المرايا والديكور</button>
-          <button onclick="filterGallery('showers')" class="gallery-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition" data-filter="showers" data-i18n="filter_showers">كبائن الشاور</button>
-          <button onclick="filterGallery('railings')" class="gallery-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition" data-filter="railings" data-i18n="filter_railings">الدرابزين والقواطع</button>
-        </div>
-      </div>
-
-      <!-- Gallery Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
-        
-        <!-- Item 1: Facade -->
-        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-white/15 h-72" data-category="facades">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Curtain wall facade" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-brandDark/95 via-brandDark/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-            <span class="text-xs font-bold text-brandCyan" data-i18n="item_1_tag">واجهات ستائرية (Curtain Wall)</span>
-            <h4 class="text-lg font-bold text-white mt-1" data-i18n="item_1_title">برج إداري وتجاري حديث</h4>
-            <p class="text-xs text-slate-300 mt-1" data-i18n="item_1_sub">زجاج سيكوريت دبل عازل وموفر للطاقة</p>
-          </div>
-        </div>
-
-        <!-- Item 2: Mirror -->
-        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-white/15 h-72" data-category="mirrors">
-          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Luxury LED Mirror" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-brandDark/95 via-brandDark/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-            <span class="text-xs font-bold text-brandGold" data-i18n="item_2_tag">مرايا ذكية LED</span>
-            <h4 class="text-lg font-bold text-white mt-1" data-i18n="item_2_title">مرايا فندقية بإضاءة مخفية ولمس ذكي</h4>
-            <p class="text-xs text-slate-300 mt-1" data-i18n="item_2_sub">نقاء كريستالي فائق مع نظام مانع البخار</p>
-          </div>
-        </div>
-
-        <!-- Item 3: Shower -->
-        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-white/15 h-72" data-category="showers">
-          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Frameless Shower" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-brandDark/95 via-brandDark/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-            <span class="text-xs font-bold text-brandCyan" data-i18n="item_3_tag">كبائن شاور عصرية</span>
-            <h4 class="text-lg font-bold text-white mt-1" data-i18n="item_3_title">كابينة سيكوريت فريملس 10mm</h4>
-            <p class="text-xs text-slate-300 mt-1" data-i18n="item_3_sub">إكسسوارات ستانلس ستيل مطفي فاخر</p>
-          </div>
-        </div>
-
-        <!-- Item 4: Railings -->
-        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-white/15 h-72" data-category="railings">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Glass Balustrade" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-brandDark/95 via-brandDark/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-            <span class="text-xs font-bold text-brandCyan" data-i18n="item_4_tag">درابزين وأسوار زجاجية</span>
-            <h4 class="text-lg font-bold text-white mt-1" data-i18n="item_4_title">درابزين شرفة بانورامي مصفح</h4>
-            <p class="text-xs text-slate-300 mt-1" data-i18n="item_4_sub">تثبيت أرضي بدون إطار خارجي</p>
-          </div>
-        </div>
-
-        <!-- Item 5: Office Partitions -->
-        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-white/15 h-72" data-category="railings">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Glass Partitions" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-brandDark/95 via-brandDark/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-            <span class="text-xs font-bold text-brandCyan" data-i18n="item_5_tag">قواطع إدارية ومكتبية</span>
-            <h4 class="text-lg font-bold text-white mt-1" data-i18n="item_5_title">فواصل مكاتب زجاجية عازلة للصوت</h4>
-            <p class="text-xs text-slate-300 mt-1" data-i18n="item_5_sub">زجاج معتم جزئياً مع حفر رملي زخرفي</p>
-          </div>
-        </div>
-
-        <!-- Item 6: Decorative Mirror Wall -->
-        <div class="gallery-item group relative rounded-2xl overflow-hidden border border-white/15 h-72" data-category="mirrors">
-          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Decorative Mirror Wall" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-          <div class="absolute inset-0 bg-gradient-to-t from-brandDark/95 via-brandDark/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
-            <span class="text-xs font-bold text-brandGold" data-i18n="item_6_tag">مرايا جدارية مشطوفة</span>
-            <h4 class="text-lg font-bold text-white mt-1" data-i18n="item_6_title">تكسية جدارية كاملة بمرايا مشطوفة</h4>
-            <p class="text-xs text-slate-300 mt-1" data-i18n="item_6_sub">تصميم هندسي يمنح اتساعاً وفخامة للمجالس والصالات</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 7. WHY CHOOSE US -->
-    <!-- ========================================================================= -->
-    <section id="why-us" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="relative rounded-3xl p-8 sm:p-12 lg:p-16 border border-white/15 bg-gradient-to-br from-brandNavy via-brandDark to-brandNavy shadow-2xl overflow-hidden">
-        
-        <div class="relative z-10 space-y-12">
-          
-          <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
-              <i data-lucide="award" class="w-3.5 h-3.5"></i>
-              <span data-i18n="why_tag">ميزتنا التنافسية</span>
-            </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="why_title">لماذا يختار العملاء شركة قوس المدينة؟</h2>
-            <p class="text-slate-300 text-base" data-i18n="why_desc">
-              نجمع بين الخبرة العريقة، التكنولوجيا الأوتوماتيكية المتطورة، والالتزام الصارم بالمواعيد لنقدم لك جودة تليق بتطلعاتك.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
-            <div class="p-6 rounded-2xl glass-card space-y-3">
-              <div class="w-12 h-12 rounded-xl bg-brandCyan/20 text-brandCyan flex items-center justify-center">
-                <i data-lucide="gauge" class="w-6 h-6"></i>
-              </div>
-              <h3 class="text-lg font-bold text-white" data-i18n="feat_1_title">سرعة ودقة التنفيذ</h3>
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" data-i18n="feat_1_desc">طاقة إنتاجية عالية تتيح لنا تسليم طلبيات المشاريع الضخمة والطلبيات الخاصة في أوقات قياسية.</p>
-            </div>
-
-            <div class="p-6 rounded-2xl glass-card space-y-3">
-              <div class="w-12 h-12 rounded-xl bg-brandCyan/20 text-brandCyan flex items-center justify-center">
-                <i data-lucide="check-check" class="w-6 h-6"></i>
-              </div>
-              <h3 class="text-lg font-bold text-white" data-i18n="feat_2_title">ضمان جودة معتمد</h3>
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" data-i18n="feat_2_desc">استخدام ألواح زجاج خام ومرايا أصلية خالية من الشوائب ومطابقة للمواصفات الدولية.</p>
-            </div>
-
-            <div class="p-6 rounded-2xl glass-card space-y-3">
-              <div class="w-12 h-12 rounded-xl bg-brandCyan/20 text-brandCyan flex items-center justify-center">
-                <i data-lucide="ruler" class="w-6 h-6"></i>
-              </div>
-              <h3 class="text-lg font-bold text-white" data-i18n="feat_3_title">معاينة ورفع مقاسات مجانية</h3>
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" data-i18n="feat_3_desc">فريق هندسي متخصص لزيارة موقعك ورفع القياسات الدقيقة وتقديم الاستشارات الفنية قبل البدء.</p>
-            </div>
-
-            <div class="p-6 rounded-2xl glass-card space-y-3">
-              <div class="w-12 h-12 rounded-xl bg-brandCyan/20 text-brandCyan flex items-center justify-center">
-                <i data-lucide="headphones" class="w-6 h-6"></i>
-              </div>
-              <h3 class="text-lg font-bold text-white" data-i18n="feat_4_title">دعم فني وخدمة ما بعد البيع</h3>
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed" data-i18n="feat_4_desc">ضمان حقيقي على التركيب والماكينات والإكسسوارات مع متابعة مستمرة لرضا عملائنا.</p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 8. INTERACTIVE QUOTE & INQUIRY GENERATOR -->
-    <!-- ========================================================================= -->
-    <section id="quote" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-brandCyan/30 shadow-glow-cyan">
-        
-        <div class="text-center space-y-3 mb-8">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
-            <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
-            <span data-i18n="quote_tag">طلب عرض سعر مباشر</span>
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white" data-i18n="quote_title">احصل على تسعير فوري لمشروعك</h2>
-          <p class="text-slate-300 text-sm" data-i18n="quote_desc">
-            املأ التفاصيل أدناه لإنشاء طلبك وإرساله فوراً لفريق المبيعات عبر الواتساب أو البريد:
-          </p>
-        </div>
-
-        <form id="quoteForm" onsubmit="handleQuoteSubmit(event)" class="space-y-6">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            
-            <!-- Customer Name -->
-            <div class="space-y-2">
-              <label class="text-xs font-bold text-slate-300" data-i18n="form_name">الاسم الكريم / اسم الشركة</label>
-              <input type="text" id="quoteName" required placeholder="مثال: م. أحمد أو شركة..." class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-brandCyan focus:ring-1 focus:ring-brandCyan text-white placeholder-slate-500 text-sm outline-none transition" />
-            </div>
-
-            <!-- Phone Number -->
-            <div class="space-y-2">
-              <label class="text-xs font-bold text-slate-300" data-i18n="form_phone">رقم الهاتف أو الواتساب</label>
-              <input type="tel" id="quotePhone" required placeholder="091XXXXXXX" class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-brandCyan focus:ring-1 focus:ring-brandCyan text-white placeholder-slate-500 text-sm outline-none transition" dir="ltr" />
-            </div>
-
-            <!-- Product / Service Type -->
-            <div class="space-y-2">
-              <label class="text-xs font-bold text-slate-300" data-i18n="form_type">نوع المنتج أو الخدمة المطلوبة</label>
-              <select id="quoteProduct" class="w-full px-4 py-3 rounded-xl bg-brandNavy border border-white/15 focus:border-brandCyan focus:ring-1 focus:ring-brandCyan text-white text-sm outline-none transition">
-                <option value="زجاج سيكوريت مقسى (Tempered)" data-i18n="opt_1">زجاج سيكوريت مقسى (Tempered)</option>
-                <option value="زجاج دبل غلاس عازل (Double Glazed)" data-i18n="opt_2">زجاج دبل غلاس عازل (Double Glazed)</option>
-                <option value="مرايا ليد ذكية ومرايا ديكورية (LED Mirrors)" data-i18n="opt_3">مرايا ليد ذكية ومرايا ديكورية (LED Mirrors)</option>
-                <option value="كبائن شاور وحواجز زجاجية (Shower Enclosures)" data-i18n="opt_4">كبائن شاور وحواجز زجاجية (Shower Enclosures)</option>
-                <option value="درابزين وأسوار وواجهات زجاجية (Railings & Facades)" data-i18n="opt_5">درابزين وأسوار وواجهات زجاجية (Railings & Facades)</option>
-                <option value="خدمات تشكيل وقص CNC وشطف (CNC Processing)" data-i18n="opt_6">خدمات تشكيل وقص CNC وشطف (CNC Processing)</option>
-                <option value="أخرى / استشارة هندسية (Other)" data-i18n="opt_7">أخرى / استشارة هندسية خاصة</option>
-              </select>
-            </div>
-
-            <!-- Estimated Thickness / Color -->
-            <div class="space-y-2">
-              <label class="text-xs font-bold text-slate-300" data-i18n="form_thickness">السماكة التقريبية / اللون</label>
-              <input type="text" id="quoteThickness" placeholder="مثال: 10mm شفاف نقي أو 6mm دبل..." class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-brandCyan focus:ring-1 focus:ring-brandCyan text-white placeholder-slate-500 text-sm outline-none transition" />
-            </div>
-
-          </div>
-
-          <!-- Dimensions / Details -->
-          <div class="space-y-2">
-            <label class="text-xs font-bold text-slate-300" data-i18n="form_details">المقاسات التقريبية أو تفاصيل المشروع</label>
-            <textarea id="quoteDetails" rows="3" placeholder="أدخل الأبعاد (الارتفاع × العرض)، الكمية، أو أي ملاحظات إضافية..." class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 focus:border-brandCyan focus:ring-1 focus:ring-brandCyan text-white placeholder-slate-500 text-sm outline-none transition"></textarea>
-          </div>
-
-          <!-- Submit Buttons (WhatsApp Direct / Email) -->
-          <div class="flex flex-col sm:flex-row gap-4 pt-2">
-            <button type="submit" class="flex-1 flex items-center justify-center gap-2 py-4 px-6 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base shadow-lg transition">
-              <i data-lucide="message-circle" class="w-5 h-5"></i>
-              <span data-i18n="btn_send_whatsapp">إرسال الطلب فوراً عبر واتساب</span>
-            </button>
-            <a href="tel:0913104466" class="flex items-center justify-center gap-2 py-4 px-6 rounded-xl glass-panel border border-white/20 text-white hover:bg-white/10 font-bold text-sm sm:text-base transition">
-              <i data-lucide="phone-call" class="w-5 h-5 text-brandCyan"></i>
-              <span data-i18n="btn_call_sales">اتصال مباشر بالمبيعات</span>
-            </a>
-          </div>
-
-        </form>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 9. FAQ SECTION -->
-    <!-- ========================================================================= -->
-    <section id="faq" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-      
-      <div class="text-center space-y-3">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
-          <i data-lucide="help-circle" class="w-3.5 h-3.5"></i>
-          <span data-i18n="faq_tag">استفسارات متكررة</span>
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white" data-i18n="faq_title">الأسئلة الشائعة حول الزجاج والمرايا</h2>
-      </div>
-
-      <div class="space-y-4" id="faqAccordion">
-        
-        <!-- Q1 -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
-          <button onclick="toggleFaq(1)" class="w-full text-start p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white hover:text-brandCyan transition">
-            <span data-i18n="faq_q1">ما الفرق بين زجاج السيكوريت المقسى والزجاج المصفح (اللامينيت)؟</span>
-            <i data-lucide="chevron-down" id="faqIcon1" class="w-5 h-5 text-brandCyan shrink-0 transition-transform"></i>
-          </button>
-          <div id="faqAns1" class="hidden px-5 sm:px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-4">
-            <p data-i18n="faq_a1">
-              الزجاج السيكوريت يتم تسخينه لدرجة حرارة 650° مئوية ثم تبريده مفاجئاً لزيادة مقاومته للصدمات، وعند انكساره يتفتت لقطع صغيرة آمنة. أما الزجاج المصفح (Laminated) فيتكون من لوحين زجاجيين بينهما طبقة بوليمرية (PVB)، وعند انكساره يبقى متماسكاً في مكانه دون تساقط، مما يجعله مثالياً للأسقف والمظلات والأماكن فائقة الأمان.
-            </p>
-          </div>
-        </div>
-
-        <!-- Q2 -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
-          <button onclick="toggleFaq(2)" class="w-full text-start p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white hover:text-brandCyan transition">
-            <span data-i18n="faq_q2">هل يمكن تفصيل مرايا LED وكبائن الشاور بقياسات وأشكال مخصصة؟</span>
-            <i data-lucide="chevron-down" id="faqIcon2" class="w-5 h-5 text-brandCyan shrink-0 transition-transform"></i>
-          </button>
-          <div id="faqAns2" class="hidden px-5 sm:px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-4">
-            <p data-i18n="faq_a2">
-              نعم بالتأكيد! نقوم في قوس المدينة بتفصيل وتصنيع المرايا والكبائن حسب أبعاد حمامك أو صالتك بدقة المليمتر، مع إمكانية إضافة إضاءات LED بثلاث درجات لونية، حساسات لمس ذكية، مكبرات صوت بلوتوث، وأنظمة إزالة البخار.
-            </p>
-          </div>
-        </div>
-
-        <!-- Q3 -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
-          <button onclick="toggleFaq(3)" class="w-full text-start p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white hover:text-brandCyan transition">
-            <span data-i18n="faq_q3">كم يستغرق وقت تصنيع وتسليم طلبيات الزجاج السيكوريت والدبل؟</span>
-            <i data-lucide="chevron-down" id="faqIcon3" class="w-5 h-5 text-brandCyan shrink-0 transition-transform"></i>
-          </button>
-          <div id="faqAns2" class="hidden px-5 sm:px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-4">
-            <p data-i18n="faq_a3">
-              بفضل خطوط الإنتاج السريعة وأفراننا المتطورة في طرابلس، يستغرق تصنيع الطلبيات المعتادة من 2 إلى 4 أيام عمل، مع توفير خيار التصنيع العاجل للمشاريع الطارئة والتسليم لموقع العميل.
-            </p>
-          </div>
-        </div>
-
-        <!-- Q4 -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-white/10">
-          <button onclick="toggleFaq(4)" class="w-full text-start p-5 sm:p-6 flex items-center justify-between gap-4 font-bold text-white hover:text-brandCyan transition">
-            <span data-i18n="faq_q4">هل توفرون خدمة التوصيل والتركيب داخل طرابلس وباقي المدن الليبية؟</span>
-            <i data-lucide="chevron-down" id="faqIcon4" class="w-5 h-5 text-brandCyan shrink-0 transition-transform"></i>
-          </button>
-          <div id="faqAns4" class="hidden px-5 sm:px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-white/5 pt-4">
-            <p data-i18n="faq_a4">
-              نعم، يتوفر لدينا أسطول سيارات مجهز بحوامل زجاج آمنة وفريق فني محترف لتركيب الواجهات، الكبائن، والدرابزين في طرابلس وضواحيها، مع إمكانية التوريد لكافة المدن والمناطق الليبية.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- ========================================================================= -->
-    <!-- 10. CONTACT & LOCATION SECTION -->
-    <!-- ========================================================================= -->
-    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      
-      <div class="text-center space-y-3">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
-          <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
-          <span data-i18n="contact_tag">تواصل معنا</span>
-        </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white" data-i18n="contact_title">يسعدنا دائماً استقبالكم والتواصل معكم</h2>
-        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto" data-i18n="contact_desc">
-          تواصل مع فريقنا الفني والمبيعات للحصول على استشارة هندسية أو طلب معاينة موقعية في طرابلس وليبيا.
-        </p>
-      </div>
-
-      <!-- Contact Info Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Phone 1 & WhatsApp -->
-        <div class="glass-card rounded-2xl p-6 text-center space-y-4">
-          <div class="w-14 h-14 rounded-2xl bg-brandCyan/20 text-brandCyan flex items-center justify-center mx-auto">
-            <i data-lucide="phone" class="w-7 h-7"></i>
-          </div>
-          <div>
-            <h4 class="text-lg font-bold text-white" data-i18n="contact_phone_title">الهاتف والمبيعات المباشرة</h4>
-            <p class="text-xs text-slate-400 mt-1" data-i18n="contact_phone_sub">متاح للمكالمات والواتساب</p>
-          </div>
-          <div class="space-y-2 pt-2">
-            <a href="tel:0913104466" class="block text-lg font-black text-brandCyan hover:underline" dir="ltr">091 310 4466</a>
-            <a href="tel:0930677549" class="block text-lg font-black text-brandCyanLight hover:underline" dir="ltr">093 067 7549</a>
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="glass-card rounded-2xl p-6 text-center space-y-4">
-          <div class="w-14 h-14 rounded-2xl bg-brandBlue/20 text-brandCyanLight flex items-center justify-center mx-auto">
-            <i data-lucide="mail" class="w-7 h-7"></i>
-          </div>
-          <div>
-            <h4 class="text-lg font-bold text-white" data-i18n="contact_email_title">البريد الإلكتروني</h4>
-            <p class="text-xs text-slate-400 mt-1" data-i18n="contact_email_sub">لاستقبال المخططات والمناقصات</p>
-          </div>
-          <div class="pt-3">
-            <a href="mailto:Gawsalmadina19@gmail.com" class="text-sm sm:text-base font-bold text-slate-200 hover:text-brandCyan transition block" dir="ltr">
-              Gawsalmadina19@gmail.com
-            </a>
-          </div>
-        </div>
-
-        <!-- Location -->
-        <div class="glass-card rounded-2xl p-6 text-center space-y-4">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
-            <i data-lucide="map-pin" class="w-7 h-7"></i>
-          </div>
-          <div>
-            <h4 class="text-lg font-bold text-white" data-i18n="contact_loc_title">الموقع والمصنع</h4>
-            <p class="text-xs text-slate-400 mt-1" data-i18n="contact_loc_sub">ليبيا - طرابلس</p>
-          </div>
-          <p class="text-sm font-semibold text-slate-200 pt-2" data-i18n="contact_address">
-            طرابلس - شارع الجمهورية خلف عمارة الصحافة
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Quick Action Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-        <a href="https://wa.me/218913104466" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-lg transition">
-          <i data-lucide="message-circle" class="w-5 h-5"></i>
-          <span data-i18n="btn_whatsapp_open">محادثة واتساب سريعة (+218 91 310 4466)</span>
-        </a>
-        <a href="tel:0913104466" class="inline-flex items-center gap-3 px-8 py-4 rounded-xl glass-panel border border-white/20 text-white hover:bg-white/10 font-bold text-base transition">
-          <i data-lucide="phone" class="w-5 h-5 text-brandCyan"></i>
-          <span data-i18n="btn_call_now">اتصل الآن مباشرة</span>
-        </a>
-      </div>
-
-    </section>
-
-  </main>
-
-  <!-- ========================================================================= -->
-  <!-- FOOTER -->
-  <!-- ========================================================================= -->
-  <footer class="border-t border-white/10 bg-brandNavy/90 pt-16 pb-12 text-slate-400 text-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        <!-- Brand Info -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brandCyan to-brandBlue flex items-center justify-center text-white p-2">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
-                <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                <polyline points="2 17 12 22 22 17" />
-                <polyline points="2 12 12 17 22 12" />
-              </svg>
-            </div>
-            <span class="text-xl font-bold text-white" data-i18n="footer_brand">شركة قوس المدينة</span>
-          </div>
-          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="footer_desc">
-            المصنع الرائد في ليبيا لتصنيع وتشكيل وتوريد الزجاج السيكوريت، الزجاج المزدوج العازل، والمرايا الذكية الفاخرة بأحدث الماكينات العالمية.
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="space-y-3">
-          <h4 class="text-white font-bold text-base" data-i18n="footer_nav_title">روابط سريعة</h4>
-          <ul class="space-y-2 text-xs sm:text-sm">
-            <li><a href="#about" class="hover:text-brandCyan transition" data-i18n="nav_about">من نحن</a></li>
-            <li><a href="#products" class="hover:text-brandCyan transition" data-i18n="nav_products">منتجاتنا وخدماتنا</a></li>
-            <li><a href="#factory" class="hover:text-brandCyan transition" data-i18n="nav_factory">المصنع والتقنيات</a></li>
-            <li><a href="#specs" class="hover:text-brandCyan transition" data-i18n="nav_specs">دليل السماكات</a></li>
-            <li><a href="#portfolio" class="hover:text-brandCyan transition" data-i18n="nav_portfolio">معرض الأعمال</a></li>
-          </ul>
-        </div>
-
-        <!-- Products List -->
-        <div class="space-y-3">
-          <h4 class="text-white font-bold text-base" data-i18n="footer_prods_title">المنتجات الرئيسية</h4>
-          <ul class="space-y-2 text-xs sm:text-sm">
-            <li><a href="#products" class="hover:text-brandCyan transition" data-i18n="prod_1_title">الزجاج السيكوريت المقسى</a></li>
-            <li><a href="#products" class="hover:text-brandCyan transition" data-i18n="prod_2_title">الزجاج المزدوج العازل DGU</a></li>
-            <li><a href="#products" class="hover:text-brandCyan transition" data-i18n="prod_3_title">مرايا LED الذكية والفاخرة</a></li>
-            <li><a href="#products" class="hover:text-brandCyan transition" data-i18n="prod_4_title">كبائن الشاور والدرابزين</a></li>
-            <li><a href="#products" class="hover:text-brandCyan transition" data-i18n="prod_6_title">قص وشطف وتشكيل CNC</a></li>
-          </ul>
-        </div>
-
-        <!-- Contacts Info -->
-        <div class="space-y-3">
-          <h4 class="text-white font-bold text-base" data-i18n="footer_contact_title">معلومات الاتصال</h4>
-          <div class="space-y-2 text-xs sm:text-sm">
-            <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brandCyan"></i> <span data-i18n="contact_address">طرابلس - شارع الجمهورية خلف الصحافة</span></p>
-            <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-brandCyan"></i> <span dir="ltr">091 310 4466 / 093 067 7549</span></p>
-            <p class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brandCyan"></i> <span>Gawsalmadina19@gmail.com</span></p>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Copyright Bar -->
-      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-        <p>© <span id="copyrightYear">2026</span> <span data-i18n="footer_copy">شركة قوس المدينة لتصنيع الزجاج والمرايا - جميع الحقوق محفوظة.</span></p>
-        <p class="text-slate-500" data-i18n="footer_sub_copy">Qaws Al-Madina Glass & Mirror Manufacturing Co. | Tripoli, Libya</p>
       </div>
 
     </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 w-full max-w-4xl mx-auto pt-6 text-center text-xs text-slate-400">
+    <p>© <span id="year">2026</span> <span data-i18n="footer_copy">شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا - جميع الحقوق محفوظة</span></p>
   </footer>
 
-  <!-- Floating WhatsApp Action Button -->
-  <a href="https://wa.me/218913104466" target="_blank" class="fixed bottom-6 start-6 z-50 flex items-center gap-2.5 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-2xl shadow-emerald-900/60 hover:scale-105 transition-all group" aria-label="WhatsApp Contact">
-    <i data-lucide="message-circle" class="w-6 h-6"></i>
-    <span class="hidden md:inline" data-i18n="floating_whatsapp">تواصل معنا عبر واتساب</span>
-  </a>
-
-  <!-- ========================================================================= -->
-  <!-- JAVASCRIPT: I18N ENGINE & INTERACTIVE CONTROLLERS -->
-  <!-- ========================================================================= -->
+  <!-- Clean i18n & RTL Script -->
   <script>
-    // Set dynamic copyright year
-    document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // -------------------------------------------------------------
-    // 1. Complete Translation Dictionaries (AR / EN)
-    // -------------------------------------------------------------
-    const translations = {
+    const i18nData = {
       ar: {
-        meta_title: "شركة قوس المدينة | لتصنيع وتشكيل الزجاج والمرايا - طرابلس، ليبيا",
-        meta_desc: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في ليبيا - طرابلس. زجاج سيكوريت، زجاج دبل عازل، زجاج مصفح، مرايا ليد ذكية، كبائن شاور، واجهات درابزين، وتشكيل CNC بأعلى معايير الجودة.",
-        top_location: "طرابلس - شارع الجمهورية خلف عمارة الصحافة",
-        top_hours: "السبت - الخميس: 8:30 ص - 6:30 م",
-        company_brand: "قوس المدينة",
-        badge_glass_mirrors: "زجاج ومرايا",
-        company_sub: "لتصنيع وتشكيل الزجاج والمرايا",
-        nav_about: "من نحن",
-        nav_products: "منتجاتنا وخدماتنا",
-        nav_factory: "مصنعنا والتقنيات",
-        nav_specs: "دليل السماكات",
-        nav_portfolio: "معرض الأعمال",
-        nav_why: "لماذا نحن",
-        nav_faq: "الأسئلة الشائعة",
-        nav_contact: "اتصل بنا",
-        btn_request_quote: "طلب عرض سعر",
-        btn_whatsapp_chat: "محادثة واتساب مباشرة",
-        hero_badge: "أعلى معايير التصنيع والتقسية الحرارية والتشكيل في ليبيا",
-        hero_h1_p1: "شركة قوس المدينة",
-        hero_h1_p2: "لتصنيع وتشكيل الزجاج والمرايا",
-        hero_subtext: "نقدم حلولاً هندسية ومعمارية متكاملة في صناعة الزجاج السيكوريت المقسى، الزجاج المزدوج العازل (Double Glazed)، الزجاج المصفح (Laminated)، وأحدث تشكيلات المرايا الذكية LED والكبائن والواجهات المعمارية بأحدث تقنيات CNC العالمية.",
-        hero_cta_quote: "اطلب عرض سعر فوري",
-        hero_cta_explore: "تصفح المنتجات والخدمات",
-        stat_exp: "عاماً من الخبرة والريادة",
-        stat_precision: "دقة قطع وتشكيل CNC",
-        stat_projects: "مشروع معماري منجز",
-        stat_standards: "مطابقة للمواصفات العالمية",
-        about_badge_title: "ضمان المتانة والأمان",
-        about_badge_desc: "فحص جودة دقيق لكل قطعة قبل التسليم والتركيب",
-        about_tag: "نبذة عن الشركة ومصنعنا",
-        about_title_1: "نحن نبني الشفافية والأناقة،",
-        about_title_2: "قطعة زجاجية تلو الأخرى.",
-        about_desc_1: "تأسست شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا لتكون وجهتكم الموثوقة الأولى في طرابلس وليبيا للحلول الزجاجية المعمارية والديكورية المتطورة. نمتلك خطوط إنتاج متقدمة وأفران تقسيم حراري فائقة الكفاءة وماكينات CNC إيطالية توفر أعلى درجات الدقة في التقطيع، الشطف، الحفر، والتلميع.",
-        about_desc_2: "نلبي احتياجات كبرى المشاريع الهندسية، الأبراج الإدارية، المجمعات السكنية، الفنادق، والفيلات الفاخرة، إضافة إلى تلبية الطلبات الخاصة المخصصة بأعلى معايير السلامة والجودة العالمية.",
-        pillar_1_title: "دقة القياس والتصنيع",
-        pillar_1_desc: "قص مبرمج بدقة المليمتر لتناسب مثالي في الموقع",
-        pillar_2_title: "تقنيات التقسية الأوروبية",
-        pillar_2_desc: "تحمل صدمات يصل إلى 5 أضعاف الزجاج العادي",
-        pillar_3_title: "توريد وتركيب متكامل",
-        pillar_3_desc: "فريق فني متخصص للرفع المساحي والتركيب الاحترافي",
-        pillar_4_title: "تصاميم مرايا عصرية",
-        pillar_4_desc: "مرايا LED ذكية، شطف ديكوري، ولمسات فندقية راقية",
-        prod_tag: "مجموعة متكاملة",
-        prod_title: "منتجاتنا وخدماتنا المتخصصة",
-        prod_sub: "نصنع ونشكل أفضل أنواع الزجاج والمرايا وفق أعلى المعايير الهندسية والمعمارية لتلبي كافة المتطلبات الإنشائية والجمالية.",
-        badge_safety: "أمان عالي",
-        prod_1_title: "الزجاج السيكوريت المقسى (Tempered)",
-        prod_1_desc: "زجاج معالج حرارياً في أفراننا المتطورة لزيادة قوة التحمل حتى 5 أضعاف الزجاج العادي، يتفتت إلى حبيبات صغيرة غير حادة عند الكسر لضمان أقصى درجات الأمان في الواجهات، الأبواب، والفواصل.",
-        thickness_label: "السماكات: 6mm - 19mm",
-        btn_quote_item: "طلب تسعير",
-        badge_thermal: "عزل حراري وصوتي",
-        prod_2_title: "الزجاج المزدوج العازل (Double Glazed)",
-        prod_2_desc: "وحدات زجاجية مزدوجة ومفرغة محكمة الإغلاق ومحقونة بغاز الأرجون مع فواصل ألومنيوم حرارية، توفر عزلاً فائقاً للصوت والحرارة وتوفر فواتير التكييف والطاقة للمباني والفلل.",
-        dgu_feature: "عزل صوتي 80% + توفير طاقة",
-        badge_luxury: "فخامة وتكنولوجيا",
-        prod_3_title: "المرايا الذكية الفاخرة ومرايا LED",
-        prod_3_desc: "مرايا كريستالية بلجيكية نقية مزودة بإضاءات LED خفية تعمل باللمس، أنظمة إزالة الضباب والبخار (Anti-Fog)، ومرايا ديكورية مشطوفة لكبرى الصالونات، الفنادق، والفيلات الفخمة.",
-        touch_dimming: "مستشعر لمس + مانع بخار",
-        badge_custom: "تفصيل مخصص",
-        prod_4_title: "كبائن الشاور وحواجز الاستحمام",
-        prod_4_desc: "كبائن شاور زجاجية سيكوريت عصرية (مفصلية وسحابة) بزجاج 8mm و 10mm مع معالجة نانو المقاومة للترسبات وبقع الماء، وإكسسوارات ستانلس ستيل 304 المقاومة للصدأ بألوانها الذهبي والأسود والكروم.",
-        shower_sub: "زجاج نقي + استانلس 304",
-        badge_modern: "رؤية بانورامية",
-        prod_5_title: "الدرابزين والأسوار الزجاجية",
-        prod_5_desc: "أنظمة درابزين زجاجية مصفحة وسيكوريت للشرفات والسلالم وأحواض السباحة بأنظمة التثبيت الأرضية المخفية والـ Spigots، تمنح المبنى مظهراً فندقياً عصرياً وأماناً لا يضاهى.",
-        rail_sub: "زجاج مصفح 12mm - 21.5mm",
-        badge_cnc: "تشكيل ميكانيكي",
-        prod_6_title: "خدمات تشكيل وقص وزخرفة الزجاج (CNC)",
-        prod_6_desc: "خدمات هندسية متكاملة تشمل القص الآلي بماكينات CNC، شطف وتلميع الحواف (Straight & Bevel Edge Polishing)، الثقب الدقيق لمقابض الأبواب، والطباعة والحفر الرملي الزخرفي (Sandblasting).",
-        cnc_sub: "دقة متناهية ± 0.2mm",
-        factory_tag: "البنية التحتية والماكينات",
-        factory_title: "مصنع مجهز بأحدث خطوط الإنتاج والتقسية الحرارية",
-        factory_desc: "يضم مصنع شركة قوس المدينة في طرابلس بنية تحتية صناعية متكاملة ومجهزة بأحدث ماكينات تشكيل الزجاج والتقسية الحرارية المستوردة، بإشراف مهندسين وفنيين ذوي خبرة طويلة لضمان سرعة التنفيذ والامتثال الصارم لأعلى معايير الأمان والسلامة.",
-        machinery_1_title: "فرن التقسية الحرارية الأفقي (Tempering Furnace)",
-        machinery_1_desc: "تسخين متجانس وتبريد هوائي سريع يمنح الزجاج قوة فائقة ومرونة لمقاومة الرياح والصدمات الشديدة.",
-        machinery_2_title: "طاولات القص الأوتوماتيكية بالكمبيوتر (CNC Cutting Tables)",
-        machinery_2_desc: "قص مبرمج بدقة هندسية متناهية للأشكال المستقيمة والمنحنية والقواطع الخاصة.",
-        machinery_3_title: "خطوط جلي وتلميع وشطف الحواف (Edging & Beveling Lines)",
-        machinery_3_desc: "تشطيب فائق النقاء للحواف (Flat Polish, Pencil, Bevel) لتوفير أمان تام ولمعان كريستالي مذهل.",
-        factory_sub_tag: "المعايير المعتمدة",
-        factory_sub_title: "EN 12150 (Tempered Glass) & ASTM Standards",
-        specs_tag: "دليل المواصفات الهندسية",
-        specs_title: "سماكات واستخدامات الزجاج النموذجية",
-        specs_desc: "اختر السماكة ونوع الزجاج المناسب لمشروعك وفق الإرشادات الهندسية الموصى بها:",
-        spec_card_title: "الخيارات اللونية المتوفرة",
-        color_clear: "شفاف نقي (Clear)",
-        color_extra_clear: "سوبر كلير (Extra Clear)",
-        color_bronze: "برونزي عاكس (Bronze)",
-        color_grey: "رمادي غامق (Smoke Grey)",
-        color_frosted: "مثلج ومصنفر (Frosted)",
-        btn_inquire_thickness: "طلب استشارة لهذه السماكة",
-        portfolio_tag: "معرض الأعمال والإنجازات",
-        portfolio_title: "مشاريع وتطبيقات من أرض الواقع",
-        portfolio_desc: "نماذج من أعمالنا المنفذة في كبرى المشاريع التجارية والسكنية والفندقية في ليبيا.",
-        filter_all: "الكل",
-        filter_facades: "الواجهات والمباني",
-        filter_mirrors: "المرايا والديكور",
-        filter_showers: "كبائن الشاور",
-        filter_railings: "الدرابزين والقواطع",
-        item_1_tag: "واجهات ستائرية (Curtain Wall)",
-        item_1_title: "برج إداري وتجاري حديث",
-        item_1_sub: "زجاج سيكوريت دبل عازل وموفر للطاقة",
-        item_2_tag: "مرايا ذكية LED",
-        item_2_title: "مرايا فندقية بإضاءة مخفية ولمس ذكي",
-        item_2_sub: "نقاء كريستالي فائق مع نظام مانع البخار",
-        item_3_tag: "كبائن شاور عصرية",
-        item_3_title: "كابينة سيكوريت فريملس 10mm",
-        item_3_sub: "إكسسوارات ستانلس ستيل مطفي فاخر",
-        item_4_tag: "درابزين وأسوار زجاجية",
-        item_4_title: "درابزين شرفة بانورامي مصفح",
-        item_4_sub: "تثبيت أرضي بدون إطار خارجي",
-        item_5_tag: "قواطع إدارية ومكتبية",
-        item_5_title: "فواصل مكاتب زجاجية عازلة للصوت",
-        item_5_sub: "زجاج معتم جزئياً مع حفر رملي زخرفي",
-        item_6_tag: "مرايا جدارية مشطوفة",
-        item_6_title: "تكسية جدارية كاملة بمرايا مشطوفة",
-        item_6_sub: "تصميم هندسي يمنح اتساعاً وفخامة للمجالس والصالات",
-        why_tag: "ميزتنا التنافسية",
-        why_title: "لماذا يختار العملاء شركة قوس المدينة؟",
-        why_desc: "نجمع بين الخبرة العريقة، التكنولوجيا الأوتوماتيكية المتطورة، والالتزام الصارم بالمواعيد لنقدم لك جودة تليق بتطلعاتك.",
-        feat_1_title: "سرعة ودقة التنفيذ",
-        feat_1_desc: "طاقة إنتاجية عالية تتيح لنا تسليم طلبيات المشاريع الضخمة والطلبيات الخاصة في أوقات قياسية.",
-        feat_2_title: "ضمان جودة معتمد",
-        feat_2_desc: "استخدام ألواح زجاج خام ومرايا أصلية خالية من الشوائب ومطابقة للمواصفات الدولية.",
-        feat_3_title: "معاينة ورفع مقاسات مجانية",
-        feat_3_desc: "فريق هندسي متخصص لزيارة موقعك ورفع القياسات الدقيقة وتقديم الاستشارات الفنية قبل البدء.",
-        feat_4_title: "دعم فني وخدمة ما بعد البيع",
-        feat_4_desc: "ضمان حقيقي على التركيب والماكينات والإكسسوارات مع متابعة مستمرة لرضا عملائنا.",
-        quote_tag: "طلب عرض سعر مباشر",
-        quote_title: "احصل على تسعير فوري لمشروعك",
-        quote_desc: "املأ التفاصيل أدناه لإنشاء طلبك وإرساله فوراً لفريق المبيعات عبر الواتساب أو البريد:",
-        form_name: "الاسم الكريم / اسم الشركة",
-        form_phone: "رقم الهاتف أو الواتساب",
-        form_type: "نوع المنتج أو الخدمة المطلوبة",
-        form_thickness: "السماكة التقريبية / اللون",
-        form_details: "المقاسات التقريبية أو تفاصيل المشروع",
-        opt_1: "زجاج سيكوريت مقسى (Tempered)",
-        opt_2: "زجاج دبل غلاس عازل (Double Glazed)",
-        opt_3: "مرايا ليد ذكية ومرايا ديكورية (LED Mirrors)",
-        opt_4: "كبائن شاور وحواجز زجاجية (Shower Enclosures)",
-        opt_5: "درابزين وأسوار وواجهات زجاجية (Railings & Facades)",
-        opt_6: "خدمات تشكيل وقص CNC وشطف (CNC Processing)",
-        opt_7: "أخرى / استشارة هندسية خاصة",
-        btn_send_whatsapp: "إرسال الطلب فوراً عبر واتساب",
-        btn_call_sales: "اتصال مباشر بالمبيعات",
-        faq_tag: "استفسارات متكررة",
-        faq_title: "الأسئلة الشائعة حول الزجاج والمرايا",
-        faq_q1: "ما الفرق بين زجاج السيكوريت المقسى والزجاج المصفح (اللامينيت)؟",
-        faq_a1: "الزجاج السيكوريت يتم تسخينه لدرجة حرارة 650° مئوية ثم تبريده مفاجئاً لزيادة مقاومته للصدمات، وعند انكساره يتفتت لقطع صغيرة آمنة. أما الزجاج المصفح (Laminated) فيتكون من لوحين زجاجيين بينهما طبقة بوليمرية (PVB)، وعند انكساره يبقى متماسكاً في مكانه دون تساقط، مما يجعله مثالياً للأسقف والمظلات والأماكن فائقة الأمان.",
-        faq_q2: "هل يمكن تفصيل مرايا LED وكبائن الشاور بقياسات وأشكال مخصصة؟",
-        faq_a2: "نعم بالتأكيد! نقوم في قوس المدينة بتفصيل وتصنيع المرايا والكبائن حسب أبعاد حمامك أو صالتك بدقة المليمتر، مع إمكانية إضافة إضاءات LED بثلاث درجات لونية، حساسات لمس ذكية، مكبرات صوت بلوتوث، وأنظمة إزالة البخار.",
-        faq_q3: "كم يستغرق وقت تصنيع وتسليم طلبيات الزجاج السيكوريت والدبل؟",
-        faq_a3: "بفضل خطوط الإنتاج السريعة وأفراننا المتطورة في طرابلس، يستغرق تصنيع الطلبيات المعتادة من 2 إلى 4 أيام عمل، مع توفير خيار التصنيع العاجل للمشاريع الطارئة والتسليم لموقع العميل.",
-        faq_q4: "هل توفرون خدمة التوصيل والتركيب داخل طرابلس وباقي المدن الليبية؟",
-        faq_a4: "نعم، يتوفر لدينا أسطول سيارات مجهز بحوامل زجاج آمنة وفريق فني محترف لتركيب الواجهات، الكبائن، والدرابزين في طرابلس وضواحيها، مع إمكانية التوريد لكافة المدن والمناطق الليبية.",
-        contact_tag: "تواصل معنا",
-        contact_title: "يسعدنا دائماً استقبالكم والتواصل معكم",
-        contact_desc: "تواصل مع فريقنا الفني والمبيعات للحصول على استشارة هندسية أو طلب معاينة موقعية في طرابلس وليبيا.",
-        contact_phone_title: "الهاتف والمبيعات المباشرة",
-        contact_phone_sub: "متاح للمكالمات والواتساب",
-        contact_email_title: "البريد الإلكتروني",
-        contact_email_sub: "لاستقبال المخططات والمناقصات",
-        contact_loc_title: "الموقع والمصنع",
-        contact_loc_sub: "ليبيا - طرابلس",
-        contact_address: "طرابلس - شارع الجمهورية خلف عمارة الصحافة",
-        btn_whatsapp_open: "محادثة واتساب سريعة (+218 91 310 4466)",
-        btn_call_now: "اتصل الآن مباشرة",
-        footer_brand: "شركة قوس المدينة",
-        footer_desc: "المصنع الرائد في ليبيا لتصنيع وتشكيل وتوريد الزجاج السيكوريت، الزجاج المزدوج العازل، والمرايا الذكية الفاخرة بأحدث الماكينات العالمية.",
-        footer_nav_title: "روابط سريعة",
-        footer_prods_title: "المنتجات الرئيسية",
-        footer_contact_title: "معلومات الاتصال",
-        footer_copy: "شركة قوس المدينة لتصنيع الزجاج والمرايا - جميع الحقوق محفوظة.",
-        footer_sub_copy: "Qaws Al-Madina Glass & Mirror Manufacturing Co. | Tripoli, Libya",
-        floating_whatsapp: "تواصل معنا عبر واتساب",
+        title: "شركة قوس المدينة | لتصنيع وتشكيل الزجاج والمرايا",
+        desc: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في طرابلس، ليبيا. زجاج سيكوريت مقسى، دبل غلاس، زجاج مصفح، مرايا LED، كبائن شاور، ودرابزين.",
+        brand_mini: "قوس المدينة",
+        company_badge: "مصنع زجاج ومرايا معتمد",
+        company_name: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا",
+        what_we_do_title: "مجال العمل والخدمات",
+        what_we_do_desc: "متخصصون في تصنيع، معالجة، وتوريد كافة الأعمال والحلول الزجاجية المعمارية والمرايا الفاخرة وفق أعلى معايير الجودة والدقة:",
+        srv_1: "زجاج سيكوريت مقسى (Tempered)",
+        srv_2: "زجاج دبل غلاس عازل (Double Glazed)",
+        srv_3: "زجاج مصفح وأمني (Laminated)",
+        srv_4: "مرايا LED ذكية ومرايا ديكورية",
+        srv_5: "كبائن شاور وحواجز استحمام",
+        srv_6: "درابزين وأسوار وواجهات زجاجية",
+        srv_7: "قص وتشكيل وشطف CNC",
+        contacts_title: "بيانات التواصل المباشر",
+        btn_call_1: "اتصال هاتفي:",
+        btn_call_2: "اتصال هاتفي:",
+        btn_whatsapp: "محادثة واتساب مباشرة:",
+        btn_email: "البريد الإلكتروني:",
+        address: "الموقع: ليبيا - طرابلس - شارع الجمهورية خلف عمارة الصحافة",
+        footer_copy: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا - جميع الحقوق محفوظة",
+        lang_btn: "English"
       },
       en: {
-        meta_title: "Qaws Al-Madina | Glass & Mirror Manufacturing Co. - Tripoli, Libya",
-        meta_desc: "Qaws Al-Madina Company for Glass & Mirror Manufacturing in Tripoli, Libya. Premium Tempered Securit Glass, Double Glazing DGU, Laminated Glass, Smart LED Mirrors, Shower Cabins, and CNC processing.",
-        top_location: "Tripoli - Al-Jumhuriya St., behind Al-Sahafa Building",
-        top_hours: "Saturday - Thursday: 8:30 AM - 6:30 PM",
-        company_brand: "Qaws Al-Madina",
-        badge_glass_mirrors: "Glass & Mirrors",
-        company_sub: "Glass & Mirror Manufacturing Co.",
-        nav_about: "About Us",
-        nav_products: "Products & Services",
-        nav_factory: "Factory & Tech",
-        nav_specs: "Glass Specs",
-        nav_portfolio: "Projects",
-        nav_why: "Why Us",
-        nav_faq: "FAQ",
-        nav_contact: "Contact Us",
-        btn_request_quote: "Request a Quote",
-        btn_whatsapp_chat: "Direct WhatsApp Chat",
-        hero_badge: "Leading Glass Tempering & Mirror Manufacturing in Libya",
-        hero_h1_p1: "Qaws Al-Madina Company",
-        hero_h1_p2: "For Glass & Mirror Manufacturing",
-        hero_subtext: "We provide comprehensive architectural and engineering glass solutions including Toughened Securit Glass, Insulated Double Glazed Units (DGU), Laminated Safety Glass, Smart LED Mirrors, Shower Enclosures, and Modern Glass Facades powered by advanced CNC machinery.",
-        hero_cta_quote: "Get an Instant Quote",
-        hero_cta_explore: "Explore Products & Services",
-        stat_exp: "Years of Industry Excellence",
-        stat_precision: "CNC Cutting & Shaping Precision",
-        stat_projects: "Architectural Projects Delivered",
-        stat_standards: "European & Global Standards",
-        about_badge_title: "Certified Safety & Durability",
-        about_badge_desc: "Rigorous quality inspection for every piece before delivery & installation",
-        about_tag: "About Our Company & Factory",
-        about_title_1: "Crafting Transparency and Luxury,",
-        about_title_2: "One Glass Panel at a Time.",
-        about_desc_1: "Qaws Al-Madina Company for Glass & Mirror Manufacturing was established to be your premier trusted partner in Tripoli and across Libya for advanced architectural and decorative glass solutions. We operate cutting-edge horizontal tempering furnaces, automated CNC cutting lines, and precision Italian edge polishing machines to deliver unmatched accuracy.",
-        about_desc_2: "We serve commercial towers, residential developments, luxury hotels, private villas, and custom architectural designs, adhering to the highest international safety, structural, and acoustic standards.",
-        pillar_1_title: "Millimeter Precision",
-        pillar_1_desc: "Automated computerized CNC cutting for a seamless fit on site",
-        pillar_2_title: "European Tempering Tech",
-        pillar_2_desc: "Impact resistance up to 5 times stronger than regular float glass",
-        pillar_3_title: "End-to-End Supply & Installation",
-        pillar_3_desc: "Specialized engineering teams for site surveys and professional fitting",
-        pillar_4_title: "Luxury Smart Mirrors",
-        pillar_4_desc: "Touch sensor LED mirrors, beveled edges, and bespoke hospitality finishes",
-        prod_tag: "Complete Portfolio",
-        prod_title: "Our Specialized Products & Services",
-        prod_sub: "We manufacture and process the finest architectural glass and custom mirrors to fulfill your structural, thermal, acoustic, and aesthetic demands.",
-        badge_safety: "High Safety",
-        prod_1_title: "Tempered Securit Glass",
-        prod_1_desc: "Thermally treated in state-of-the-art horizontal furnaces to withstand extreme wind loads and impacts. Shatters into small, harmless granular particles for maximum occupant protection.",
-        thickness_label: "Thicknesses: 6mm - 19mm",
-        btn_quote_item: "Request Quote",
-        badge_thermal: "Thermal & Sound Insulation",
-        prod_2_title: "Double Glazed Units (DGU)",
-        prod_2_desc: "Hermetically sealed insulated glass units with thermal spacers and Argon gas injection, delivering superior thermal U-values, noise reduction, and major energy savings.",
-        dgu_feature: "80% Noise Reduction + Energy Saving",
-        badge_luxury: "Luxury & Innovation",
-        prod_3_title: "Luxury Smart LED Mirrors",
-        prod_3_desc: "Belgian crystal-clear mirrors equipped with hidden diffused LED lighting, intelligent touch sensors, integrated anti-fog heating pads, and decorative beveled frames for hotels and luxury homes.",
-        touch_dimming: "Touch Sensor + Anti-Fog Pad",
-        badge_custom: "Custom Made",
-        prod_4_title: "Shower Enclosures & Cabins",
-        prod_4_desc: "Modern frameless hinged and sliding glass shower enclosures crafted from 8mm & 10mm toughened glass, featuring anti-limescale nano coating and premium Grade 304 stainless steel hardware.",
-        shower_sub: "Crystal Clear Glass + 304 Stainless",
-        badge_modern: "Panoramic Views",
-        prod_5_title: "Glass Railings & Balustrades",
-        prod_5_desc: "Frameless laminated and tempered glass balustrades for balconies, staircases, and pools with base-shoe or spigot mountings, combining maximum panoramic clarity with rock-solid safety.",
-        rail_sub: "Laminated 12mm - 21.5mm",
-        badge_cnc: "Mechanical Shaping",
-        prod_6_title: "CNC Glass Processing & Beveling",
-        prod_6_desc: "Precision engineering services including CNC waterjet cutting, flat and pencil edge polishing, computerized beveling, drilling for architectural fittings, and artistic sandblasting.",
-        cnc_sub: "High Precision ± 0.2mm",
-        factory_tag: "Infrastructure & Machinery",
-        factory_title: "Advanced Factory with European Production Lines",
-        factory_desc: "Qaws Al-Madina facility in Tripoli is powered by imported automated machinery, monitored by skilled technicians and glass engineers to ensure swift turnaround, strict tolerances, and adherence to safety codes.",
-        machinery_1_title: "Horizontal Tempering Furnace",
-        machinery_1_desc: "Uniform heating and high-pressure air quenching conferring massive structural resilience and thermal resistance.",
-        machinery_2_title: "CNC Automatic Glass Cutting Tables",
-        machinery_2_desc: "Computer-controlled cutting delivering perfect geometry for rectilinear and complex curved profiles.",
-        machinery_3_title: "Automated Edging & Beveling Lines",
-        machinery_3_desc: "Flawless mirror-finish edge polishing (Flat Polish, Pencil, Bevel) ensuring total safety and aesthetic elegance.",
-        factory_sub_tag: "Certified Standards",
-        factory_sub_title: "EN 12150 (Tempered Glass) & ASTM Standards",
-        specs_tag: "Technical Specification Guide",
-        specs_title: "Standard Glass Thicknesses & Applications",
-        specs_desc: "Select the ideal glass thickness and configuration for your architectural or interior project:",
-        spec_card_title: "Available Tints & Finishes",
-        color_clear: "Standard Clear",
-        color_extra_clear: "Extra Clear (Low-Iron)",
-        color_bronze: "Reflective Bronze",
-        color_grey: "Smoke Dark Grey",
-        color_frosted: "Frosted & Sandblasted",
-        btn_inquire_thickness: "Inquire for This Thickness",
-        portfolio_tag: "Completed Projects",
-        portfolio_title: "Real-World Architectural Applications",
-        portfolio_desc: "A showcase of our successfully executed projects across commercial, residential, and hospitality sectors in Libya.",
-        filter_all: "All",
-        filter_facades: "Facades & Buildings",
-        filter_mirrors: "Mirrors & Decor",
-        filter_showers: "Shower Cabins",
-        filter_railings: "Railings & Partitions",
-        item_1_tag: "Curtain Wall Facades",
-        item_1_title: "Modern Commercial Office Tower",
-        item_1_sub: "Insulated Double Glazed Low-E Glass",
-        item_2_tag: "Smart LED Mirrors",
-        item_2_title: "Hospitality Vanity Mirrors with Backlight",
-        item_2_sub: "Belgian ultra-clear mirror with anti-fog heater",
-        item_3_tag: "Modern Shower Cabins",
-        item_3_title: "10mm Frameless Glass Shower Enclosure",
-        item_3_sub: "Brushed matte Grade 304 hardware",
-        item_4_tag: "Glass Railings",
-        item_4_title: "Panoramic Laminated Balcony Railing",
-        item_4_sub: "Base shoe embedded frameless system",
-        item_5_tag: "Office Partitions",
-        item_5_title: "Acoustic Glass Office Dividers",
-        item_5_sub: "Frosted privacy bands with custom logo etching",
-        item_6_tag: "Beveled Mirror Wall",
-        item_6_title: "Full Feature Beveled Mirror Cladding",
-        item_6_sub: "Geometric arrangement adding spaciousness to salons",
-        why_tag: "Our Competitive Edge",
-        why_title: "Why Choose Qaws Al-Madina?",
-        why_desc: "We combine deep technical mastery, automated precision machinery, and a commitment to on-time delivery to exceed your expectations.",
-        feat_1_title: "Rapid Execution & Turnaround",
-        feat_1_desc: "High daily production capacity allows us to fulfill large architectural orders and custom requests on schedule.",
-        feat_2_title: "Certified Prime Materials",
-        feat_2_desc: "100% defect-free raw float glass and silver mirrors adhering to international safety specifications.",
-        feat_3_title: "Free Site Survey & Measurement",
-        feat_3_desc: "Our engineering crew visits your site for precision laser surveying and technical consultation.",
-        feat_4_title: "Comprehensive Warranty & Support",
-        feat_4_desc: "Complete warranty on tempered glass, hardware, and installation with ongoing after-sales service.",
-        quote_tag: "Direct Price Quotation",
-        quote_title: "Get an Instant Quote for Your Project",
-        quote_desc: "Fill in the specifications below to generate your inquiry and send it immediately via WhatsApp or Email:",
-        form_name: "Full Name / Company Name",
-        form_phone: "Phone or WhatsApp Number",
-        form_type: "Required Product or Service",
-        form_thickness: "Approximate Thickness / Color",
-        form_details: "Approximate Dimensions or Project Details",
-        opt_1: "Tempered Securit Glass",
-        opt_2: "Double Glazed Units (DGU)",
-        opt_3: "Smart LED & Decorative Mirrors",
-        opt_4: "Shower Cabins & Enclosures",
-        opt_5: "Glass Railings & Facades",
-        opt_6: "CNC Processing, Cutting & Beveling",
-        opt_7: "Other / Custom Engineering Consultation",
-        btn_send_whatsapp: "Send Request Directly on WhatsApp",
-        btn_call_sales: "Direct Call with Sales Team",
-        faq_tag: "Common Inquiries",
-        faq_title: "Frequently Asked Questions",
-        faq_q1: "What is the difference between Tempered Glass and Laminated Glass?",
-        faq_a1: "Tempered (Securit) glass is thermally treated at 650°C to withstand high impact, shattering into blunt pebble-like pieces upon breakage. Laminated glass comprises two or more glass sheets bonded with a tough PVB interlayer that holds the glass in place when cracked, making it mandatory for overhead canopies, skylights, and high-security zones.",
-        faq_q2: "Can LED mirrors and shower cabins be custom-made to exact dimensions?",
-        faq_a2: "Yes, absolutely! At Qaws Al-Madina, every mirror and shower enclosure is custom manufactured to your exact bathroom or room dimensions, with options for dual-color LED backlight, touch switches, Bluetooth, and demister pads.",
-        faq_q3: "How long does manufacturing and delivery take?",
-        faq_a3: "Thanks to our dedicated local production lines in Tripoli, standard orders are processed within 2 to 4 business days. Rush manufacturing options are available for urgent architectural milestones.",
-        faq_q4: "Do you provide delivery and installation services across Libya?",
-        faq_a4: "Yes, we operate dedicated transport vehicles fitted with specialized glass racks and professional installation crews serving Tripoli and its suburbs, with wholesale shipping available to all Libyan regions.",
-        contact_tag: "Get In Touch",
-        contact_title: "We Are Always Ready to Assist You",
-        contact_desc: "Connect with our technical and sales team for engineering advice, pricing, or on-site laser measurements in Tripoli and Libya.",
-        contact_phone_title: "Direct Phone & Sales",
-        contact_phone_sub: "Available for Calls & WhatsApp",
-        contact_email_title: "Email Inquiries",
-        contact_email_sub: "For Blueprints, Tenders & Inquiries",
-        contact_loc_title: "Factory & Headquarters",
-        contact_loc_sub: "Tripoli, Libya",
-        contact_address: "Tripoli - Al-Jumhuriya St., behind Al-Sahafa Building",
-        btn_whatsapp_open: "Fast WhatsApp Chat (+218 91 310 4466)",
-        btn_call_now: "Call Us Directly",
-        footer_brand: "Qaws Al-Madina",
-        footer_desc: "Libya's premier manufacturer and processor of architectural tempered glass, double glazed units, and luxury smart LED mirrors using cutting-edge international technology.",
-        footer_nav_title: "Quick Links",
-        footer_prods_title: "Main Products",
-        footer_contact_title: "Contact Info",
-        footer_copy: "Qaws Al-Madina Glass & Mirror Manufacturing Co. - All Rights Reserved.",
-        footer_sub_copy: "Qaws Al-Madina Glass & Mirror Manufacturing Co. | Tripoli, Libya",
-        floating_whatsapp: "Chat on WhatsApp",
+        title: "Qaws Al-Madina | Glass & Mirror Manufacturing Co.",
+        desc: "Qaws Al-Madina Company for Glass & Mirror Manufacturing in Tripoli, Libya. Tempered glass, double glazed DGU, laminated glass, LED mirrors, shower cabins & railings.",
+        brand_mini: "Qaws Al-Madina",
+        company_badge: "Certified Glass & Mirror Manufacturer",
+        company_name: "Qaws Al-Madina Company for Glass & Mirror Manufacturing",
+        what_we_do_title: "What We Do & Core Capabilities",
+        what_we_do_desc: "Specialized in manufacturing, processing, and supplying premium architectural glass solutions and custom luxury mirrors with unmatched precision:",
+        srv_1: "Tempered Securit Glass",
+        srv_2: "Double Glazed Insulated Glass (DGU)",
+        srv_3: "Laminated Safety Glass",
+        srv_4: "Smart LED & Custom Decorative Mirrors",
+        srv_5: "Shower Cabins & Enclosures",
+        srv_6: "Glass Railings & Facades",
+        srv_7: "CNC Cutting, Shaping & Beveling",
+        contacts_title: "Direct Contact Information",
+        btn_call_1: "Direct Phone:",
+        btn_call_2: "Direct Phone:",
+        btn_whatsapp: "Direct WhatsApp:",
+        btn_email: "Email:",
+        address: "Location: Tripoli, Libya - Al-Jumhuriya St., behind Al-Sahafa Building",
+        footer_copy: "Qaws Al-Madina Glass & Mirror Manufacturing Co. - All Rights Reserved",
+        lang_btn: "العربية"
       }
     };
 
-    // -------------------------------------------------------------
-    // 2. Glass Thickness Spec Data
-    // -------------------------------------------------------------
-    const specData = {
-      6: {
-        title_ar: "الزجاج السيكوريت الخفيف والشبابيك المزدوجة",
-        title_en: "Light Tempered Glass & Double Glazed Windows",
-        desc_ar: "تعتبر سماكة 6 ملم الخيار القياسي والمثالي للنوافذ السكنية المزدوجة (Double Glazing)، الواجهات الداخلية الخفيفة، أرفف الخزائن الزجاجية، والمرايا الجدارية الكبيرة المدعمة.",
-        desc_en: "6mm is the standard and most widely used thickness for double glazed residential windows (DGU), light interior partitions, furniture glass tops, and framed large-scale mirrors.",
-        bullets_ar: ["نوافذ الألمنيوم والـ PVC المزدوجة", "المرايا الكبيرة ذات الشطف العريض", "أرفف وأسطح الطاولات الخفيفة", "أبواب الخزائن المودرن"],
-        bullets_en: ["Double Glazed Aluminum & UPVC Windows", "Large Beveled Accent Mirrors", "Shelving & Light Table Tops", "Modern Wardrobe Glass Doors"]
-      },
-      8: {
-        title_ar: "زجاج كبائن الشاور والأبواب المفصلية",
-        title_en: "Shower Enclosures & Hinged Glass Doors",
-        desc_ar: "السماكة المثالية لكبائن الشاور الفاخرة وحواجز البانيو والأبواب المفصلية الداخلية، حيث تمنح توازناً استثنائياً بين القوة وخفة الحركة وسهولة التركيب.",
-        desc_en: "The ideal thickness for premium frameless shower screens, bathtub screens, and interior glass doors, delivering a perfect balance between rigidity and smooth sliding/swinging action.",
-        bullets_ar: ["كبائن الشاور السحابة والمفصلية", "أبواب المكاتب الداخلية", "فواصل غرف الاجتماعات", "قواطع المطاعم والكافيهات"],
-        bullets_en: ["Sliding & Hinged Shower Cubicles", "Interior Office Swing Doors", "Meeting Room Dividers", "Cafe & Restaurant Partitions"]
-      },
-      10: {
-        title_ar: "زجاج الواجهات والقواطع المعمارية الكبيرة",
-        title_en: "Commercial Facades & Large Architectural Partitions",
-        desc_ar: "الخيار الهندسي المفضل للواجهات التجارية، كبائن الشاور الفارهة فريملس، والدرابزين الداخلي، نظراً لصلابته الفائقة ومقاومته العالية للضغوط والاهتزازات.",
-        desc_en: "The primary engineering choice for retail storefronts, luxury frameless walk-in showers, and interior balustrades, offering high resistance to vibrations and lateral load.",
-        bullets_ar: ["واجهات المحلات والمعارض التجارية", "كبائن الشاور الفاخرة بدون إطار", "درابزين السلالم والشرفات الداخلية", "أبواب المداخل الأوتوماتيكية"],
-        bullets_en: ["Retail Storefronts & Showrooms", "Luxury Walk-In Frameless Showers", "Interior Staircase Glass Railings", "Automatic Sliding Entrance Doors"]
-      },
-      12: {
-        title_ar: "زجاج الدرابزين المصفح والواجهات الخارجية الضخمة",
-        title_en: "Heavy-Duty Railings & High-Span Structural Facades",
-        desc_ar: "سماكة فائقة القوة مخصصة للأسوار الزجاجية الخارجية للشرفات وأحواض السباحة والواجهات الزجاجية المرتفعة وأنظمة التثبيت بنظام العنكبوت (Spider Glass).",
-        desc_en: "Heavy-duty structural glass engineered for external balcony balustrades, pool fencing, multi-story glass curtain walls, and spider-fitting structural glazing systems.",
-        bullets_ar: ["درابزين البلكونات والأسطح المرتفعة", "حواجز وأسوار أحواض السباحة", "واجهات السبايدر الإنشائية الضخمة", "أرضيات زجاجية مدعمة"],
-        bullets_en: ["High-Wind Balcony & Rooftop Balustrades", "Swimming Pool Safety Glass Fencing", "Structural Spider Glazing Facades", "Reinforced Architectural Glass Floors"]
-      },
-      19: {
-        title_ar: "الزجاج الإنشائي الثقيل والزجاج المصفح متعدد الطبقات",
-        title_en: "Heavy Structural Glass & Bullet-Resistant Multi-Layer Glass",
-        desc_ar: "أعلى درجات التحمل والمتانة للألواح الإنشائية الحاملة، طاولات الاجتماعات الكريستالية الضخمة، والزجاج المصفح الأمني للبنوك والسفارات والمباني الحساسة.",
-        desc_en: "Maximum load-bearing structural glass designed for crystal executive conference tables, structural glass beams, aquarium viewports, and multi-layer armored bank security glass.",
-        bullets_ar: ["طاولات مجالس واجتماعات فاخرة", "زجاج أمني مصفح للبنوك والمجوهرات", "درجات وسلالم زجاجية كاملة", "أحواض مائية وجدران زجاجية داعمة"],
-        bullets_en: ["Luxury Executive Boardroom Tables", "High-Security Armored Bank Glass", "All-Glass Structural Stair Treads", "Heavy Aquarium & Retaining Glass Walls"]
-      }
-    };
+    let currentLang = 'ar';
 
-    let currentLanguage = 'ar';
-    let currentSpecThickness = 6;
-
-    // -------------------------------------------------------------
-    // 3. Language Switching Engine
-    // -------------------------------------------------------------
     function setLanguage(lang) {
-      currentLanguage = lang;
-      localStorage.setItem('qaws_lang', lang);
-      
-      const htmlTag = document.documentElement;
-      htmlTag.setAttribute('lang', lang);
-      htmlTag.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      currentLang = lang;
+      localStorage.setItem('qaws_minimal_lang', lang);
 
-      // Update text content with data-i18n
+      const html = document.documentElement;
+      html.setAttribute('lang', lang);
+      html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+
+      // Update text contents
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          el.textContent = translations[lang][key];
+        if (i18nData[lang] && i18nData[lang][key]) {
+          el.textContent = i18nData[lang][key];
         }
       });
 
-      // Update attributes with data-i18n-attr (e.g. content:meta_desc)
+      // Update attributes
       document.querySelectorAll('[data-i18n-attr]').forEach(el => {
-        const attrMapping = el.getAttribute('data-i18n-attr');
-        const [attrName, key] = attrMapping.split(':');
-        if (translations[lang] && translations[lang][key]) {
-          el.setAttribute(attrName, translations[lang][key]);
+        const [attr, key] = el.getAttribute('data-i18n-attr').split(':');
+        if (i18nData[lang] && i18nData[lang][key]) {
+          el.setAttribute(attr, i18nData[lang][key]);
         }
       });
 
-      // Update Language Button Text
-      const langBtnText = document.getElementById('currentLangText');
-      if (langBtnText) {
-        langBtnText.textContent = lang === 'ar' ? 'English' : 'العربية';
-      }
-
-      // Re-render current spec tab
-      showSpec(currentSpecThickness);
-
-      // Re-render Lucide icons
-      lucide.createIcons();
-    }
-
-    function toggleLanguage() {
-      const nextLang = currentLanguage === 'ar' ? 'en' : 'ar';
-      setLanguage(nextLang);
-    }
-
-    // -------------------------------------------------------------
-    // 4. Interactive Spec Selector
-    // -------------------------------------------------------------
-    function showSpec(thickness) {
-      currentSpecThickness = thickness;
-      const data = specData[thickness];
-      if (!data) return;
-
-      // Update buttons style
-      document.querySelectorAll('.spec-tab-btn').forEach(btn => {
-        const btnThick = parseInt(btn.getAttribute('data-thickness'));
-        if (btnThick === thickness) {
-          btn.className = 'spec-tab-btn active py-3 px-4 rounded-xl font-bold text-sm text-center border transition bg-brandCyan text-brandDark border-brandCyan shadow-glow-cyan';
-        } else {
-          btn.className = 'spec-tab-btn py-3 px-4 rounded-xl font-bold text-sm text-center border transition bg-white/5 text-slate-300 border-white/10 hover:border-brandCyan/40';
-        }
-      });
-
-      // Update Content
-      document.getElementById('specTitleBadge').textContent = thickness + ' mm';
-      document.getElementById('specTitle').textContent = currentLanguage === 'ar' ? data.title_ar : data.title_en;
-      document.getElementById('specDetails').textContent = currentLanguage === 'ar' ? data.desc_ar : data.desc_en;
-
-      const bulletsContainer = document.getElementById('specBullets');
-      const bulletsList = currentLanguage === 'ar' ? data.bullets_ar : data.bullets_en;
-      bulletsContainer.innerHTML = bulletsList.map(item => `
-        <div class="flex items-center gap-2 text-sm text-slate-200">
-          <i data-lucide="check" class="w-4 h-4 text-brandCyan"></i>
-          <span>${item}</span>
-        </div>
-      `).join('');
+      // Update language toggle button label
+      document.getElementById('langLabel').textContent = i18nData[lang].lang_btn;
 
       lucide.createIcons();
     }
 
-    // -------------------------------------------------------------
-    // 5. Gallery Filter
-    // -------------------------------------------------------------
-    function filterGallery(category) {
-      document.querySelectorAll('.gallery-filter').forEach(btn => {
-        if (btn.getAttribute('data-filter') === category) {
-          btn.className = 'gallery-filter active px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-brandCyan text-brandDark transition';
-        } else {
-          btn.className = 'gallery-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition';
-        }
-      });
-
-      document.querySelectorAll('.gallery-item').forEach(item => {
-        const itemCat = item.getAttribute('data-category');
-        if (category === 'all' || itemCat === category) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+    function toggleLang() {
+      setLanguage(currentLang === 'ar' ? 'en' : 'ar');
     }
 
-    // -------------------------------------------------------------
-    // 6. Mobile Menu & FAQ Accordion
-    // -------------------------------------------------------------
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('hidden');
-    }
-
-    function toggleFaq(index) {
-      const ans = document.getElementById('faqAns' + index);
-      const icon = document.getElementById('faqIcon' + index);
-      const isHidden = ans.classList.contains('hidden');
-
-      // Close all
-      for (let i = 1; i <= 4; i++) {
-        const a = document.getElementById('faqAns' + i);
-        const ic = document.getElementById('faqIcon' + i);
-        if (a) a.classList.add('hidden');
-        if (ic) ic.style.transform = 'rotate(0deg)';
-      }
-
-      if (isHidden) {
-        ans.classList.remove('hidden');
-        icon.style.transform = 'rotate(180deg)';
-      }
-    }
-
-    // -------------------------------------------------------------
-    // 7. Interactive WhatsApp Quote Generator
-    // -------------------------------------------------------------
-    function handleQuoteSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('quoteName').value.trim();
-      const phone = document.getElementById('quotePhone').value.trim();
-      const product = document.getElementById('quoteProduct').value;
-      const thickness = document.getElementById('quoteThickness').value.trim();
-      const details = document.getElementById('quoteDetails').value.trim();
-
-      let msg = "";
-      if (currentLanguage === 'ar') {
-        msg = `السلام عليكم ورحمة الله،\nأود طلب عرض سعر من شركة قوس المدينة لتصنيع الزجاج والمرايا:\n\n` +
-              `👤 الاسم: ${name}\n` +
-              `📱 رقم الهاتف: ${phone}\n` +
-              `💎 نوع الخدمة/المنتج: ${product}\n` +
-              (thickness ? `📏 السماكة / اللون: ${thickness}\n` : '') +
-              (details ? `📝 تفاصيل المشروع / المقاسات: ${details}\n` : '') +
-              `\nشكراً لكم.`;
-      } else {
-        msg = `Hello Qaws Al-Madina Glass & Mirrors,\nI would like to request a quotation:\n\n` +
-              `👤 Name: ${name}\n` +
-              `📱 Phone: ${phone}\n` +
-              `💎 Product/Service: ${product}\n` +
-              (thickness ? `📏 Thickness / Color: ${thickness}\n` : '') +
-              (details ? `📝 Dimensions & Details: ${details}\n` : '') +
-              `\nThank you.`;
-      }
-
-      const whatsappUrl = `https://wa.me/218913104466?text=${encodeURIComponent(msg)}`;
-      window.open(whatsappUrl, '_blank');
-    }
-
-    // -------------------------------------------------------------
-    // 8. Initialization on DOM Load
-    // -------------------------------------------------------------
     document.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('qaws_lang') || 'ar';
-      setLanguage(savedLang);
+      const saved = localStorage.getItem('qaws_minimal_lang') || 'ar';
+      setLanguage(saved);
       lucide.createIcons();
     });
   </script>
