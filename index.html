@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="h-full">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="title">شركة قوس المدينة | لتصنيع وتشكيل الزجاج والمرايا</title>
-  <meta name="description" data-i18n-attr="content:desc" content="شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في طرابلس، ليبيا." />
+  <title data-i18n="meta_title">شركة قوس المدينة | لتصنيع وتشكيل الزجاج والمرايا - طرابلس، ليبيا</title>
+  <meta name="description" data-i18n-attr="content:meta_desc" content="شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في طرابلس، ليبيا. رواد صناعة وتشكيل وتوريد الزجاج والمرايا بأعلى معايير الجودة والدقة." />
   
-  <!-- Fonts: Alexandria for Arabic, Plus Jakarta Sans for English -->
+  <!-- Google Fonts: Alexandria & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -17,14 +17,17 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brandDark: '#070C14',
-            brandCard: 'rgba(15, 23, 42, 0.75)',
+            brandDark: '#070D18',
+            brandNavy: '#0B1528',
+            brandSurface: '#0F1C33',
             brandCyan: '#06B6D4',
+            brandCyanLight: '#38BDF8',
             brandBlue: '#2563EB',
           },
           fontFamily: {
@@ -40,162 +43,348 @@
     :root { color-scheme: dark; }
     body {
       font-family: 'Alexandria', sans-serif;
-      background-color: #070C14;
+      background-color: #070D18;
       color: #F8FAFC;
+      overflow-x: hidden;
     }
     html[lang="en"] body {
       font-family: 'Plus Jakarta Sans', sans-serif;
     }
-    .glass-box {
-      background: linear-gradient(135deg, rgba(17, 27, 46, 0.8) 0%, rgba(10, 17, 30, 0.85) 100%);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+    .glass-nav {
+      background: rgba(7, 13, 24, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: linear-gradient(135deg, rgba(15, 28, 51, 0.7) 0%, rgba(10, 19, 36, 0.8) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(6, 182, 212, 0.3);
+      transform: translateY(-2px);
     }
   </style>
 </head>
-<body class="min-h-full flex flex-col justify-between selection:bg-brandCyan selection:text-black antialiased relative overflow-x-hidden p-4 sm:p-6 md:p-10">
+<body class="min-h-screen flex flex-col justify-between selection:bg-brandCyan selection:text-black antialiased relative">
 
-  <!-- Ambient Glow -->
+  <!-- Ambient Glowing Orbs -->
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
-    <div class="absolute -top-32 -start-32 w-80 h-80 bg-brandCyan/10 rounded-full blur-3xl"></div>
-    <div class="absolute -bottom-32 -end-32 w-80 h-80 bg-brandBlue/10 rounded-full blur-3xl"></div>
+    <div class="absolute -top-40 -start-40 w-96 h-96 bg-brandCyan/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 -end-40 w-[500px] h-[500px] bg-brandBlue/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-40 start-1/3 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
   </div>
 
-  <!-- Header / Minimal Language Switcher -->
-  <header class="relative z-10 w-full max-w-2xl mx-auto flex items-center justify-between pb-6">
-    <div class="flex items-center gap-2.5">
-      <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brandCyan to-brandBlue flex items-center justify-center text-white p-2 shadow-lg shadow-cyan-500/20">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
-          <polygon points="12 2 2 7 12 12 22 7 12 2" />
-          <polyline points="2 17 12 22 22 17" />
-          <polyline points="2 12 12 17 22 12" />
-        </svg>
-      </div>
-      <span class="text-sm font-bold text-slate-300 tracking-wide" data-i18n="brand_mini">قوس المدينة</span>
-    </div>
+  <!-- Sticky Website Navbar -->
+  <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo & Name -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brandCyan to-brandBlue flex items-center justify-center text-white p-2.5 shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full">
+              <polygon points="12 2 2 7 12 12 22 7 12 2" />
+              <polyline points="2 17 12 22 22 17" />
+              <polyline points="2 12 12 17 22 12" />
+            </svg>
+          </div>
+          <div class="text-start">
+            <div class="text-lg sm:text-xl font-black text-white group-hover:text-brandCyan transition" data-i18n="brand_name">قوس المدينة</div>
+            <div class="text-[11px] text-slate-400 font-medium" data-i18n="brand_sub">لتصنيع وتشكيل الزجاج والمرايا</div>
+          </div>
+        </a>
 
-    <!-- Language Toggle Button -->
-    <button onclick="toggleLang()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-slate-300 hover:text-white transition">
-      <i data-lucide="globe" class="w-3.5 h-3.5 text-brandCyan"></i>
-      <span id="langLabel">English</span>
-    </button>
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#hero" class="hover:text-brandCyan transition" data-i18n="nav_home">الرئيسية</a>
+          <a href="#about" class="hover:text-brandCyan transition" data-i18n="nav_about">عن الشركة</a>
+          <a href="#contact" class="hover:text-brandCyan transition" data-i18n="nav_contact">تواصل معنا</a>
+        </nav>
+
+        <!-- Language Switcher & Quick CTA -->
+        <div class="flex items-center gap-3">
+          
+          <!-- Language Toggle Button -->
+          <button onclick="toggleLang()" class="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm font-semibold text-slate-200 hover:text-brandCyan transition">
+            <i data-lucide="globe" class="w-4 h-4 text-brandCyan"></i>
+            <span id="langBtnText">English</span>
+          </button>
+
+          <!-- Direct Call CTA -->
+          <a href="tel:0913104466" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-brandCyan to-brandBlue text-white font-bold text-xs sm:text-sm shadow-md shadow-cyan-500/20 hover:opacity-90 transition">
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+            <span data-i18n="btn_call_nav">اتصل بنا</span>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
   </header>
 
-  <!-- Central Main Content Block: Name, What We Do, Contacts -->
-  <main class="relative z-10 w-full max-w-2xl mx-auto my-auto py-6 sm:py-10">
-    <div class="glass-box rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8">
+  <!-- Main Website Content -->
+  <main class="relative z-10 space-y-24 sm:space-y-32 pb-24">
+
+    <!-- ========================================================================= -->
+    <!-- 1. WEBSITE HERO SECTION -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="relative pt-12 sm:pt-20 lg:pt-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-brandSurface/80 to-brandNavy/90 p-8 sm:p-14 lg:p-20 shadow-2xl">
+        
+        <!-- Hero Ambient Glass Background Image -->
+        <div class="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80" alt="Modern Glass Architecture" class="w-full h-full object-cover opacity-15 brightness-75 scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-brandNavy via-brandNavy/80 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-3xl mx-auto text-center space-y-8">
+          
+          <!-- Trust Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brandCyan/10 border border-brandCyan/30 text-brandCyan text-xs sm:text-sm font-semibold">
+            <i data-lucide="sparkles" class="w-4 h-4 text-brandCyan"></i>
+            <span data-i18n="hero_badge">رواد صناعة وتشكيل الزجاج والمرايا في ليبيا</span>
+          </div>
+
+          <!-- Main Hero Title -->
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight sm:leading-tight">
+            <span data-i18n="hero_title_1">شركة قوس المدينة</span>
+            <br />
+            <span class="bg-gradient-to-r from-brandCyan via-brandCyanLight to-brandBlue bg-clip-text text-transparent" data-i18n="hero_title_2">
+              لتصنيع وتشكيل الزجاج والمرايا
+            </span>
+          </h1>
+
+          <!-- Hero Core Statement (What We Do) -->
+          <p class="text-base sm:text-lg md:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto" data-i18n="hero_desc">
+            متخصصون في تصنيع، وتشكيل، وتوريد كافة أعمال الزجاج المعماري والمرايا الفاخرة بأعلى معايير الجودة العالمية والدقة المتناهية للمشاريع السكنية والتجارية.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a href="https://wa.me/218913104466" target="_blank" class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-900/40 hover:scale-105 transition-all">
+              <i data-lucide="message-circle" class="w-5 h-5"></i>
+              <span data-i18n="btn_hero_whatsapp">محادثة واتساب مباشرة</span>
+            </a>
+            <a href="tel:0913104466" class="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/15 text-white font-bold text-sm sm:text-base hover:border-brandCyan/40 transition-all">
+              <i data-lucide="phone" class="w-5 h-5 text-brandCyan"></i>
+              <span data-i18n="btn_hero_call">اتصال هاتفي مباشر</span>
+            </a>
+          </div>
+
+          <!-- Fast Highlights -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-white/10 text-start">
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandCyan shrink-0"></i>
+              <span class="text-xs sm:text-sm font-semibold text-slate-200" data-i18n="feat_1">دقة متناهية في التصنيع والتشكيل</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandCyan shrink-0"></i>
+              <span class="text-xs sm:text-sm font-semibold text-slate-200" data-i18n="feat_2">أحدث الماكينات وخطوط الإنتاج</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-brandCyan shrink-0"></i>
+              <span class="text-xs sm:text-sm font-semibold text-slate-200" data-i18n="feat_3">التزام بالمواعيد وسرعة التوريد</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 2. ABOUT US SECTION -->
+    <!-- ========================================================================= -->
+    <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-white/10 space-y-6 text-start">
+        
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
+          <i data-lucide="info" class="w-3.5 h-3.5"></i>
+          <span data-i18n="about_tag">عن الشركة</span>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight" data-i18n="about_title">
+          شريككم الموثوق في عالم الزجاج والمرايا
+        </h2>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed font-normal" data-i18n="about_p1">
+          تعد <strong>شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا</strong> واحدة من المؤسسات الرائدة في طرابلس وليبيا في تقديم حلول متكاملة لصناعة وتشكيل وتوريد الزجاج والمرايا بمختلف المقاسات والمواصفات المعمارية الحديثة، مع التركيز على المتانة، الأمان، والجمال التشطيبـي الفاخر.
+        </p>
+
+        <p class="text-slate-400 text-xs sm:text-sm leading-relaxed" data-i18n="about_p2">
+          نحرص على تطبيق أعلى معايير الجودة والدقة في كافة مراحل التشكيل والمعالجة لتلبية تطلعات عملائنا من الأفراد، والمهندسين، وشركات المقاولات والتطوير العقاري.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. DIRECT CONTACTS & LOCATION SECTION -->
+    <!-- ========================================================================= -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       
-      <!-- 1. Company Name & Core Identity -->
-      <div class="space-y-3 text-start">
-        <span class="text-xs font-bold text-brandCyan uppercase tracking-widest px-2.5 py-1 rounded bg-brandCyan/10 border border-brandCyan/20 inline-block" data-i18n="company_badge">
-          صناعة وتشكيل الزجاج والمرايا
-        </span>
-        <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight" data-i18n="company_name">
-          شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا
-        </h1>
-        <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal pt-1" data-i18n="what_we_do_desc">
-          شركة متخصصة في تصنيع، وتشكيل، وتوريد الزجاج والمرايا بأعلى معايير الجودة والدقة.
+      <div class="text-center space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-brandCyan/10 text-brandCyan text-xs font-bold uppercase tracking-wider border border-brandCyan/20">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+          <span data-i18n="contact_tag">تواصل معنا</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight" data-i18n="contact_title">
+          يسعدنا تواصلكم واستقبال طلباتكم
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm max-w-xl mx-auto" data-i18n="contact_subtitle">
+          يمكنكم التواصل المباشر مع فريقنا عبر الهاتف أو الواتساب أو البريد الإلكتروني.
         </p>
       </div>
 
-      <!-- 2. Direct Contacts & Location -->
-      <div class="space-y-4 border-t border-white/10 pt-6">
-        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 text-start" data-i18n="contacts_title">
-          بيانات التواصل المباشر
-        </h2>
+      <!-- Contact Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <!-- Phone 1 -->
+        <a href="tel:0913104466" class="glass-card p-5 rounded-2xl flex flex-col justify-between space-y-3 group text-start">
+          <div class="w-10 h-10 rounded-xl bg-brandCyan/15 text-brandCyan flex items-center justify-center">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400 font-medium" data-i18n="card_phone_label">الهاتف المباشر</div>
+            <bdi dir="ltr" class="text-base font-bold text-white group-hover:text-brandCyan transition block mt-0.5">091 310 4466</bdi>
+          </div>
+        </a>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          
-          <!-- Call Button 1 -->
-          <a href="tel:0913104466" class="flex items-center justify-between p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition group text-slate-200">
-            <span class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
-              <i data-lucide="phone" class="w-4 h-4 text-brandCyan"></i>
-              <span data-i18n="btn_call_1">اتصال هاتفي:</span>
-            </span>
-            <bdi dir="ltr" class="text-sm font-bold text-white group-hover:text-brandCyan transition">091 310 4466</bdi>
-          </a>
+        <!-- Phone 2 -->
+        <a href="tel:0930677549" class="glass-card p-5 rounded-2xl flex flex-col justify-between space-y-3 group text-start">
+          <div class="w-10 h-10 rounded-xl bg-brandCyan/15 text-brandCyan flex items-center justify-center">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400 font-medium" data-i18n="card_phone_label">الهاتف المباشر</div>
+            <bdi dir="ltr" class="text-base font-bold text-white group-hover:text-brandCyan transition block mt-0.5">093 067 7549</bdi>
+          </div>
+        </a>
 
-          <!-- Call Button 2 -->
-          <a href="tel:0930677549" class="flex items-center justify-between p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition group text-slate-200">
-            <span class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
-              <i data-lucide="phone" class="w-4 h-4 text-brandCyan"></i>
-              <span data-i18n="btn_call_2">اتصال هاتفي:</span>
-            </span>
-            <bdi dir="ltr" class="text-sm font-bold text-white group-hover:text-brandCyan transition">093 067 7549</bdi>
-          </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/218913104466" target="_blank" class="glass-card p-5 rounded-2xl flex flex-col justify-between space-y-3 group text-start bg-emerald-950/20 hover:bg-emerald-950/40 border-emerald-500/20 hover:border-emerald-500/40">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-xs text-emerald-400 font-medium" data-i18n="card_whatsapp_label">محادثة واتساب</div>
+            <bdi dir="ltr" class="text-base font-bold text-emerald-300 group-hover:text-emerald-200 transition block mt-0.5">+218 91 310 4466</bdi>
+          </div>
+        </a>
 
-          <!-- WhatsApp Direct -->
-          <a href="https://wa.me/218913104466" target="_blank" class="flex items-center justify-between p-3.5 rounded-xl bg-emerald-950/40 hover:bg-emerald-900/50 border border-emerald-500/30 transition group text-slate-200 sm:col-span-2">
-            <span class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-emerald-300">
-              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
-              <span data-i18n="btn_whatsapp">محادثة واتساب مباشرة:</span>
-            </span>
-            <bdi dir="ltr" class="text-sm font-bold text-emerald-400">+218 91 310 4466</bdi>
-          </a>
-
-          <!-- Email -->
-          <a href="mailto:Gawsalmadina19@gmail.com" class="flex items-center justify-between p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition group text-slate-200 sm:col-span-2">
-            <span class="flex items-center gap-2.5 text-xs sm:text-sm font-semibold">
-              <i data-lucide="mail" class="w-4 h-4 text-brandCyan"></i>
-              <span data-i18n="btn_email">البريد الإلكتروني:</span>
-            </span>
-            <bdi dir="ltr" class="text-xs sm:text-sm font-semibold text-slate-300 group-hover:text-brandCyan transition">Gawsalmadina19@gmail.com</bdi>
-          </a>
-
-        </div>
-
-        <!-- Address Bar -->
-        <div class="flex items-start gap-2.5 p-3.5 rounded-xl bg-white/[0.03] border border-white/5 text-xs sm:text-sm text-slate-300 text-start">
-          <i data-lucide="map-pin" class="w-4 h-4 text-brandCyan shrink-0 mt-0.5"></i>
-          <span data-i18n="address">الموقع: ليبيا - طرابلس - شارع الجمهورية خلف عمارة الصحافة</span>
-        </div>
+        <!-- Email -->
+        <a href="mailto:Gawsalmadina19@gmail.com" class="glass-card p-5 rounded-2xl flex flex-col justify-between space-y-3 group text-start">
+          <div class="w-10 h-10 rounded-xl bg-brandBlue/20 text-brandCyanLight flex items-center justify-center">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-xs text-slate-400 font-medium" data-i18n="card_email_label">البريد الإلكتروني</div>
+            <bdi dir="ltr" class="text-xs font-semibold text-slate-200 group-hover:text-brandCyan transition block mt-1 truncate">Gawsalmadina19@gmail.com</bdi>
+          </div>
+        </a>
 
       </div>
 
-    </div>
+      <!-- Location Card -->
+      <div class="glass-card p-5 sm:p-6 rounded-2xl flex items-start gap-4 text-start">
+        <div class="w-10 h-10 rounded-xl bg-brandCyan/15 text-brandCyan flex items-center justify-center shrink-0 mt-0.5">
+          <i data-lucide="map-pin" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-white" data-i18n="loc_title">الموقع والمصنع:</h3>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1" data-i18n="loc_address">
+            ليبيا - طرابلس - شارع الجمهورية خلف عمارة الصحافة
+          </p>
+        </div>
+      </div>
+
+    </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer class="relative z-10 w-full max-w-2xl mx-auto pt-6 text-center text-xs text-slate-400">
-    <p>© <span id="year">2026</span> <span data-i18n="footer_copy">شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا - جميع الحقوق محفوظة</span></p>
+  <!-- Website Footer -->
+  <footer class="border-t border-white/10 bg-brandNavy/90 py-8 text-center text-xs text-slate-400">
+    <div class="max-w-6xl mx-auto px-4 space-y-2">
+      <p>© <span id="year">2026</span> <span data-i18n="footer_text">شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا - جميع الحقوق محفوظة</span></p>
+      <p class="text-slate-500" data-i18n="footer_sub">Qaws Al-Madina Glass & Mirror Manufacturing Co. | Tripoli, Libya</p>
+    </div>
   </footer>
 
-  <!-- Clean i18n & RTL Script -->
+  <!-- Translation & RTL Engine -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const i18nData = {
       ar: {
-        title: "شركة قوس المدينة | لتصنيع وتشكيل الزجاج والمرايا",
-        desc: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في طرابلس، ليبيا.",
-        brand_mini: "قوس المدينة",
-        company_badge: "صناعة وتشكيل الزجاج والمرايا",
-        company_name: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا",
-        what_we_do_desc: "شركة متخصصة في تصنيع، وتشكيل، وتوريد الزجاج والمرايا بأعلى معايير الجودة والدقة.",
-        contacts_title: "بيانات التواصل المباشر",
-        btn_call_1: "اتصال هاتفي:",
-        btn_call_2: "اتصال هاتفي:",
-        btn_whatsapp: "محادثة واتساب مباشرة:",
-        btn_email: "البريد الإلكتروني:",
-        address: "الموقع: ليبيا - طرابلس - شارع الجمهورية خلف عمارة الصحافة",
-        footer_copy: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا - جميع الحقوق محفوظة",
+        meta_title: "شركة قوس المدينة | لتصنيع وتشكيل الزجاج والمرايا - طرابلس، ليبيا",
+        meta_desc: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا في طرابلس، ليبيا. رواد صناعة وتشكيل وتوريد الزجاج والمرايا بأعلى معايير الجودة والدقة.",
+        brand_name: "قوس المدينة",
+        brand_sub: "لتصنيع وتشكيل الزجاج والمرايا",
+        nav_home: "الرئيسية",
+        nav_about: "عن الشركة",
+        nav_contact: "تواصل معنا",
+        btn_call_nav: "اتصل بنا",
+        hero_badge: "رواد صناعة وتشكيل الزجاج والمرايا في ليبيا",
+        hero_title_1: "شركة قوس المدينة",
+        hero_title_2: "لتصنيع وتشكيل الزجاج والمرايا",
+        hero_desc: "متخصصون في تصنيع، وتشكيل، وتوريد كافة أعمال الزجاج المعماري والمرايا الفاخرة بأعلى معايير الجودة العالمية والدقة المتناهية للمشاريع السكنية والتجارية.",
+        btn_hero_whatsapp: "محادثة واتساب مباشرة",
+        btn_hero_call: "اتصال هاتفي مباشر",
+        feat_1: "دقة متناهية في التصنيع والتشكيل",
+        feat_2: "أحدث الماكينات وخطوط الإنتاج",
+        feat_3: "التزام بالمواعيد وسرعة التوريد",
+        about_tag: "عن الشركة",
+        about_title: "شريككم الموثوق في عالم الزجاج والمرايا",
+        about_p1: "تعد شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا واحدة من المؤسسات الرائدة في طرابلس وليبيا في تقديم حلول متكاملة لصناعة وتشكيل وتوريد الزجاج والمرايا بمختلف المقاسات والمواصفات المعمارية الحديثة، مع التركيز على المتانة، الأمان، والجمال التشطيبـي الفاخر.",
+        about_p2: "نحرص على تطبيق أعلى معايير الجودة والدقة في كافة مراحل التشكيل والمعالجة لتلبية تطلعات عملائنا من الأفراد، والمهندسين، وشركات المقاولات والتطوير العقاري.",
+        contact_tag: "تواصل معنا",
+        contact_title: "يسعدنا تواصلكم واستقبال طلباتكم",
+        contact_subtitle: "يمكنكم التواصل المباشر مع فريقنا عبر الهاتف أو الواتساب أو البريد الإلكتروني.",
+        card_phone_label: "الهاتف المباشر",
+        card_whatsapp_label: "محادثة واتساب",
+        card_email_label: "البريد الإلكتروني",
+        loc_title: "الموقع والمصنع:",
+        loc_address: "ليبيا - طرابلس - شارع الجمهورية خلف عمارة الصحافة",
+        footer_text: "شركة قوس المدينة لتصنيع وتشكيل الزجاج والمرايا - جميع الحقوق محفوظة",
+        footer_sub: "Qaws Al-Madina Glass & Mirror Manufacturing Co. | Tripoli, Libya",
         lang_btn: "English"
       },
       en: {
-        title: "Qaws Al-Madina | Glass & Mirror Manufacturing Co.",
-        desc: "Qaws Al-Madina Company for Glass and Mirror Manufacturing in Tripoli, Libya.",
-        brand_mini: "Qaws Al-Madina",
-        company_badge: "Glass & Mirror Manufacturing",
-        company_name: "Qaws Al-Madina Company for the manufacture of glass and mirrors",
-        what_we_do_desc: "Specialized in the manufacturing, processing, and supply of high-quality glass and mirrors.",
-        contacts_title: "Direct Contact Information",
-        btn_call_1: "Direct Phone:",
-        btn_call_2: "Direct Phone:",
-        btn_whatsapp: "Direct WhatsApp:",
-        btn_email: "Email:",
-        address: "Location: Tripoli, Libya - Al-Jumhuriya St., behind Al-Sahafa Building",
-        footer_copy: "Qaws Al-Madina Glass & Mirror Manufacturing Co. - All Rights Reserved",
+        meta_title: "Qaws Al-Madina | Glass & Mirror Manufacturing Co. - Tripoli, Libya",
+        meta_desc: "Qaws Al-Madina Company for the manufacture of glass and mirrors in Tripoli, Libya. Leaders in architectural glass and luxury mirror manufacturing.",
+        brand_name: "Qaws Al-Madina",
+        brand_sub: "Glass & Mirror Manufacturing Co.",
+        nav_home: "Home",
+        nav_about: "About Us",
+        nav_contact: "Contact Us",
+        btn_call_nav: "Call Us",
+        hero_badge: "Premier Glass & Mirror Manufacturing in Libya",
+        hero_title_1: "Qaws Al-Madina Company",
+        hero_title_2: "For Glass & Mirror Manufacturing",
+        hero_desc: "Specialized in the manufacturing, processing, and supply of high-grade architectural glass and custom luxury mirrors with unmatched precision and quality.",
+        btn_hero_whatsapp: "Direct WhatsApp Chat",
+        btn_hero_call: "Direct Phone Call",
+        feat_1: "High Precision Cutting & Shaping",
+        feat_2: "Advanced Production Machinery",
+        feat_3: "On-Time Supply & Execution",
+        about_tag: "About Us",
+        about_title: "Your Trusted Partner in Glass & Mirrors",
+        about_p1: "Qaws Al-Madina Company for the manufacture of glass and mirrors is a premier industrial leader in Tripoli and Libya, delivering integrated glass and mirror solutions tailored for modern residential and commercial architecture.",
+        about_p2: "We are committed to international quality benchmarks, structural durability, and refined finishes to exceed the expectations of architects, developers, and private clients.",
+        contact_tag: "Contact Us",
+        contact_title: "We Are Always Ready to Assist You",
+        contact_subtitle: "Connect directly with our team via phone, WhatsApp, or email.",
+        card_phone_label: "Direct Phone",
+        card_whatsapp_label: "WhatsApp Chat",
+        card_email_label: "Direct Email",
+        loc_title: "Factory & Location:",
+        loc_address: "Tripoli, Libya - Al-Jumhuriya St., behind Al-Sahafa Building",
+        footer_text: "Qaws Al-Madina Glass & Mirror Manufacturing Co. - All Rights Reserved",
+        footer_sub: "Qaws Al-Madina Glass & Mirror Manufacturing Co. | Tripoli, Libya",
         lang_btn: "العربية"
       }
     };
@@ -204,13 +393,12 @@
 
     function setLanguage(lang) {
       currentLang = lang;
-      localStorage.setItem('qaws_pure_minimal_lang', lang);
+      localStorage.setItem('qaws_web_lang', lang);
 
       const html = document.documentElement;
       html.setAttribute('lang', lang);
       html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 
-      // Update text contents
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (i18nData[lang] && i18nData[lang][key]) {
@@ -218,7 +406,6 @@
         }
       });
 
-      // Update attributes
       document.querySelectorAll('[data-i18n-attr]').forEach(el => {
         const [attr, key] = el.getAttribute('data-i18n-attr').split(':');
         if (i18nData[lang] && i18nData[lang][key]) {
@@ -226,9 +413,7 @@
         }
       });
 
-      // Update language toggle button label
-      document.getElementById('langLabel').textContent = i18nData[lang].lang_btn;
-
+      document.getElementById('langBtnText').textContent = i18nData[lang].lang_btn;
       lucide.createIcons();
     }
 
@@ -237,7 +422,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      const saved = localStorage.getItem('qaws_pure_minimal_lang') || 'ar';
+      const saved = localStorage.getItem('qaws_web_lang') || 'ar';
       setLanguage(saved);
       lucide.createIcons();
     });
